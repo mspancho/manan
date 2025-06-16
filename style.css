@@ -26,17 +26,20 @@ body{
 .container{
     padding: 10px 10%;
 }
-
+/* ------nav bar------ */
 nav{
     display: flex;
-    align-items: left;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .logo{
-    width: 100px;
+    width: 70px;
+    height: 50px
 }
-
+nav ul{
+    margin-left: 40px; /* Add space between logo and nav links */
+}
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -63,7 +66,7 @@ nav ul li a:hover::after{
     width: 100%
 }
 .header-text{
-    margin-top: 30%;
+    margin-top: 25%;
     font-size: 25px;
     color:#000;
 }
@@ -75,16 +78,56 @@ nav ul li a:hover::after{
 .header-text span{
     color: #1f6fb0;
 }
+/* --------typewriter effect-------- */
+.typewriter {
+    font-size: 25px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.typewriter .static-text {
+    color: #000 !important;
+}
+
+#typewriter-text {
+    color: #1f6fb0;
+}
+.cursor {
+    color: #1f6fb0;
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
 
 /* --------about--------- */
 #about{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding: 80px 0;
-    color: #ababab
+    color: #000000;
+    background: transparent;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
 }
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+#about .container {
+    pointer-events: auto;
+}
+
+.about-col-1, .about-col-2{
+    pointer-events: auto;
 }
 
 .about-col-1{
@@ -101,7 +144,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #000000;
 }
 
 .tab-titles{
@@ -119,7 +162,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #4174d2;
+    background: #b54769;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -274,18 +317,19 @@ nav ul li a:hover::after{
 }
 .social-icons{
     margin-top: 30px;
+    
 }
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #000000;
     display: inline-block;
-    transition: transform 0.5s, color 0.5s;
+    transition: color 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
+    color: #4174d2;
+    /* transform: translateY(-5px); */
 }
 .btn.btn2{
     display: inline-block;

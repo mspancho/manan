@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Manan S. Pancholy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +19,34 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="expe.html">Experience</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
         <div class="header-text">
-            <p>AI/ML <span>|</span> Health Informatics <span>|</span> Pre-Med</p>
-            <h1>Hi, I'm <span>Manan</span>.</h1>
+            <div class="typewriter">
+                <span class="static-text">Curious about <span id="typewriter-text"></span></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="typing-container">
+                <h1>Hi, I'm <span>Manan</span>.</h1>
+            </div>
             <p>
-                <i class="fa-solid fa-envelope"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-solid fa-file"></i>
+                <div class="social-icons">
+                    <a href="mailto:manan_pancholy@brown.edu" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/mspancho" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-file"></i>
+                    </a>
+                </div>
             </p>
         </div>
     </div>
@@ -60,41 +76,10 @@
                 <a href="#">Learn More</a>
             </div>
         </ul>
+    </div>
 </div>
 
-<!-- ---------- portfolio ------------- -->
- <div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work1.jpg">
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>A web application that connects users through shared interests.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work2.jpg">
-                <div class="layer">
-                    <h3>Bocial Media App</h3>
-                    <p>A web application that connects users through shared interests.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work3.jpg">
-                <div class="layer">
-                    <h3>Tocial Media App</h3>
-                    <p>A web application that connects users through shared interests.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See More</a>
-    </div>
- </div>
+
 
  <!-- --------contact------------- -->
 <div class="contact">
@@ -134,7 +119,55 @@
     </div>
 </div>
 
+<script>
+const phrases = [
+    "multimodal learning.",
+    "health informatics.",
+    "patient care.",
+    "in-silico drug design.",
+    "NLP.",
+    "vocal music.",
+    "new frontiers in AI.",
+    "human health.",
+    "medical research.",
+    "data science.",
+    "cardiology.",
+    "ophthalmology.",
+    "gastroenterology.",
+];
 
+let currentPhraseIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+const typewriterElement = document.getElementById('typewriter-text');
 
+function typeWriter() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    
+    if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+    } else {
+        typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+    }
+    
+    let typeSpeed = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && currentCharIndex === currentPhrase.length) {
+        typeSpeed = 2000; // Pause at end
+        isDeleting = true;
+    } else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        typeSpeed = 500; // Pause before next phrase
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+}
+
+// Start the animation when page loads
+document.addEventListener('DOMContentLoaded', typeWriter);
+</script>
 </body>
 </html>
