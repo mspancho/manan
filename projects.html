@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Projects</title>
+    <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/768649c794.js" crossorigin="anonymous"></script>
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+      >
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"
+      />
 </head>
 <body>
 <div id="header-about">
@@ -32,24 +60,127 @@
 <div id="projects">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
+        <h3>If you are a prospective employer and would like to see a repository not linked here, 
+            please contact me at manan_pancholy@brown.edu</h3>
         <div class="projects-list">
             <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Creating responsive and visually appealing websites.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>Jeb Design</h2>
-                <p>Creating responsive and visually appealing websites.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div>
                 <i class="fa-solid fa-hexagon-nodes"></i>
-                <h2>Heb Design</h2>
-                <p>Creating responsive and visually appealing websites.</p>
-                <a href="#">Learn More</a>
+                <h2>GraphiStasis</h2>
+                <p>
+                    Used MLP and GNNs (SAGE, GCN, GAT) to predict epistatic
+                    interactions using a bipartite gene-disease graph.<br>
+                    <br>
+
+                    Tested the models' viability on a set of 108 schizophrenia 
+                    genes identified by a 2014 GWAS and evaluated embedding space
+                    validity using PCA and euclidean distance.<br>
+                    <br>
+
+                    Tools: PyTorch Geometric, PyTorch, Biopython Entrez, Scikit-learn, Matplotlib
+                </p>
+                <a href="https://github.com/mspancho/graphistasis" target="_blank">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                <h2>cel-IS-ac</h2>
+                <p>
+                    Using a hybrid diffusion model to generate small-molecule
+                    drug candidates for celiac disease. Inspired by family history.<br>
+                    <br>
+
+                    Tools: RDKit, Biopandas, PyTorch Lightning, WandB, PyTorch
+                </p>
+                <!-- <a href="https://github.com/mspancho/celISac" target="_blank">Learn More</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-head-side-brain"></i>
+                <h2>ML Analysis of Mental Health</h2>
+                <p>Utilizing machine learning models to understand lifestyle 
+                   and social determinants of mental health using a dataset
+                   of over 100,000 Americans from the NIH's All Of Us program.<br>
+                   <br>
+
+                   Tools: Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                <h2>Barsite</h2>
+                <p>
+                    Built multi-page responsivewebsite for Brown Barsaat, Brown's premier South Asian 
+                    a cappella group.<br>
+                    <br>
+
+                    The site features a photo gallery, video banner, and member profiles.<br>
+                    <br>
+                    
+                    Tools: HTML, CSS, JavaScript, Lightroom
+                </p>
+                <a href="" target="_blank">Visit Website</a>
+                <a href="https://github.com/mspancho/barsite" target="_blank">Visit GitHub Repo</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h2>AFib Risk Modeling</h2>
+                <p> 
+                    Developed and compared 2 predictive models (XG Boost and GLM) for atrial fibrillation diagnosis
+                    using the Synthea Adult Rhode Island dataset.<br>
+                    <br>
+                    Identified key risk factors and evaluated model performance using ROC-AUC and confusion matrix.<br>
+                    <br>
+                    Tools: Julia, XGBoost, GLM, DataFrames, Plots
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>AI Notewriting</h2>
+                <p>Co-developed a pipeline for generating clinical notes in SOAP format from synthetic
+                   patient encounter audio files and neurology case report text.<br>
+                   <br>
+
+                   Used LoRA for fine-tuning LLaMA-3.1 on synthetic clinical data.<br>
+                   <br>
+
+                   Research conducted under the Shu Lab at Rhode Island Hospital.<br>
+                   <br>
+
+                   Tools: HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-presentation-screen"></i>
+                <h2>ACC Lecture</h2>
+                <p>Co-delivered lecture on the ethics of ambient AI scribes to
+                    the American College of Cardiology Medical Professional Liability
+                    Insurance Work Group.<br>
+
+                    <br>
+                    Conducted comprehensive scoping review of implementation and ethics of
+                    ambient AI scribes and adjacent HIT prior to co-lecturing on findings
+                    with Dr. David Dudzinski, MD JD.<br>
+
+                    <br>
+                    Tools: Microsoft PowerPoint, PubMed, Google Scholar, Justia
+                </p>
+            </div>
+            <div>
+                <i class="fa-brands fa-researchgate"></i>
+                <h2>ResearchGate Profile</h2>
+                <p>Showcasing my research publications and contributions.</p>
+                <a href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Visit Profile</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-browser"></i>
+                <h2>Personal Website</h2>
+                <p>Built multi-page responsive website (the one you're on right now).<br>
+                   <br>
+                
+                   This site showcases my projects, experience, and interests.<br>
+                   <br>
+
+                   Tools: HTML, CSS, JavaScript, Photoshop
+                </p>
+                <a href="https://github.com/mspancho/manan" target="_blank">Visit GitHub Repo</a>
             </div>
         </div>
     </div>
