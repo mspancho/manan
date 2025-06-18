@@ -44,13 +44,15 @@
     <div class="container">
         <nav>
             <img src="images/MSP logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="exp.html">Experience</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-light fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
 </div>
@@ -73,10 +75,11 @@
 
                     Tested the models' viability on a set of 108 schizophrenia 
                     genes identified by a 2014 GWAS and evaluated embedding space
-                    validity using PCA and euclidean distance.<br>
+                    validity using PCA.<br>
                     <br>
-
-                    Tools: PyTorch Geometric, PyTorch, Biopython Entrez, Scikit-learn, Matplotlib
+                    Currently exploring follow-up analyses and different gene embeddings.<br>
+                    <br>
+                    <span>Tools: </span>PyTorch Geometric, PyTorch, Biopython Entrez, Scikit-learn, Matplotlib
                 </p>
                 <a href="https://github.com/mspancho/graphistasis" target="_blank">Learn More</a>
             </div>
@@ -87,8 +90,9 @@
                     Using a hybrid diffusion model to generate small-molecule
                     drug candidates for celiac disease. Inspired by family history.<br>
                     <br>
-
-                    Tools: RDKit, Biopandas, PyTorch Lightning, WandB, PyTorch
+                    celISac = celiac + IS (in silico)<br>
+                    <br>
+                    <span>Tools: </span>RDKit, Biopandas, PyTorch Lightning, WandB, PyTorch
                 </p>
                 <!-- <a href="https://github.com/mspancho/celISac" target="_blank">Learn More</a> -->
             </div>
@@ -100,24 +104,23 @@
                    of over 100,000 Americans from the NIH's All Of Us program.<br>
                    <br>
 
-                   Tools: Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib
+                   <span>Tools: </span>Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib
                 </p>
             </div>
             <div>
                 <i class="fa-solid fa-cloud-showers-heavy"></i>
                 <h2>Barsite</h2>
                 <p>
-                    Built multi-page responsivewebsite for Brown Barsaat, Brown's premier South Asian 
+                    Built multi-page responsive website for Brown Barsaat, Brown's premier South Asian 
                     a cappella group.<br>
                     <br>
 
                     The site features a photo gallery, video banner, and member profiles.<br>
                     <br>
-                    
-                    Tools: HTML, CSS, JavaScript, Lightroom
+
+                    <span>Tools: </span>HTML, CSS, JavaScript, Lightroom
                 </p>
-                <a href="" target="_blank">Visit Website</a>
-                <a href="https://github.com/mspancho/barsite" target="_blank">Visit GitHub Repo</a>
+                <a href="https://github.com/mspancho/barsite" target="_blank">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-heart-pulse"></i>
@@ -128,7 +131,7 @@
                     <br>
                     Identified key risk factors and evaluated model performance using ROC-AUC and confusion matrix.<br>
                     <br>
-                    Tools: Julia, XGBoost, GLM, DataFrames, Plots
+                    <span>Tools: </span>Julia, XGBoost, GLM, DataFrames, Plots
                 </p>
             </div>
             <div>
@@ -144,7 +147,7 @@
                    Research conducted under the Shu Lab at Rhode Island Hospital.<br>
                    <br>
 
-                   Tools: HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)
+                   <span>Tools: </span>HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)
                 </p>
             </div>
             <div>
@@ -160,14 +163,14 @@
                     with Dr. David Dudzinski, MD JD.<br>
 
                     <br>
-                    Tools: Microsoft PowerPoint, PubMed, Google Scholar, Justia
+                    <span>Tools: </span>Microsoft PowerPoint, PubMed, Google Scholar, Justia
                 </p>
             </div>
             <div>
                 <i class="fa-brands fa-researchgate"></i>
                 <h2>ResearchGate Profile</h2>
                 <p>Showcasing my research publications and contributions.</p>
-                <a href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Visit Profile</a>
+                <a href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-browser"></i>
@@ -178,10 +181,23 @@
                    This site showcases my projects, experience, and interests.<br>
                    <br>
 
-                   Tools: HTML, CSS, JavaScript, Photoshop
+                   <span>Tools: </span>HTML, CSS, JavaScript, Photoshop
                 </p>
-                <a href="https://github.com/mspancho/manan" target="_blank">Visit GitHub Repo</a>
+                <a href="https://github.com/mspancho/manan" target="_blank">Learn More</a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

@@ -4,33 +4,255 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Experience</title>
+    <title>Projects</title>
     <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/768649c794.js" crossorigin="anonymous"></script>
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+      >
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"
+      />
 </head>
 <body>
 <div id="header-about">
     <div class="container">
         <nav>
             <img src="images/MSP logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="exp.html">Experience</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-light fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
 </div>
 
+<!-- -------experiences------------- -->
+<div id="experiences">
+    <div class="container">
+        <div class="employment">
+            <h1>Employment</h1>
+            <div class="exp-list">
+                <div>
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                    <h2>Teaching Assistant</h2>
+                    <h4>BIOL 1555 at Brown University</h4>
+                    <h4>Jan 2025 - May 2025</h4>
+                    <p>
+                        <ul>
+                            <li>Walked students through code debugging during office hours to understand best programming principles in Julia/Python/Unix/SQLite</li>
+                            <li>Built out JuliaAI programming tutorial page as part of BCBI's CODIAC for Health resource</li>
+                            <li>Addressed GitHub issues and answered student questions in class during live coding lab sessions</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hospital"></i>
+                    <h2>Research Assistant</h2>
+                    <h4>Brown Center for Biomedical Informatics (BCBI) / Rhode Island Hospital</h4>
+                    <h4>Apr 2023 - Present</h4>
+                    <p>
+                        Under Neil Sarkar, PhD. (P2MI):<br>
+                        <ul>
+                            <li>Using Python ML to explore mental disorders in the context of lifestyle medicine using the NIH's All of Us dataset</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Under Dr. Liqi Shu:<br>
+                        <ul>
+                            <li>Using Stata/R/Python-based statistical analysis and AI to analyze and improve clinical outcomes in neurology patients to improve clinical workflow, evaluate treatment efficacy, and quantify risk</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Under Dr. Edward Richardson:<br>
+                        <ul>
+                            <li>Using multimodal learning as part of a web-based application to analyze and improve outcomes in cardiology patients presenting with acute coronary syndrome</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="lead-service">
+            <h1>Service</h1>
+            <div class="exp-list">
+                <div>
+                    <i class="fa-solid fa-users-medical"></i>
+                    <h2>National President</h2>
+                    <h4>American Association of Physicians of Indian Origin Pre-Medical Students Section</h4>
+                    <h4>Jul 2024 - Jul 2025</h4>
+                    <p>Overseeing executive committee and 12 chairpersons of AAPI PreMed, 
+                       dedicated to the career advancement of Indian-origin premedical students.<br>
+                       <br>
+                       Key Accomplishments:
+                       <ul>
+                            <li>Organized national conference for 200+ medical and pre-medical students,
+                                including keynote speakers, admissions panels, research symposia,
+                                humanities in medicine contest, service project, and networking opportunities</li>
+                            <li>Personally raised over $5,000 in sponsorships out of a total of $30,000</li>
+                            <li>Hosted fall virtual research symposium via Zoom</li>
+                            <li>Launched mentorship program connecting premedical students with physicians</li>
+                       </ul>
+                    </p>
+                    <p><br><br></p>
+                    <h2>National President-Elect</h2>
+                    <h4>American Association of Physicians of Indian Origin Pre-Medical Students Section</h4>
+                    <h4>Jul 2023 - Jul 2024</h4>
+                    <p>Serving on the national board of AAPI Premed, working to promote opportunities for 
+                        career advancement and mentorship for pre-medical students of Indian origin across the U.S.
+                       <br>
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h2>Fundraising Chair</h2>
+                    <h4>AAPI PreMed</h4>
+                    <h4>Jul 2024 - May 2026</h4>
+                    <p>Leading the Brown University chapter of the American Medical Student Association.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-music"></i>
+                    <h2>Musical Director / Bass</h2>
+                    <h4>Brown Barsaat</h4>
+                    <h4>Sep 2023 - Dec 2025</h4>
+                    <p>Leading the Brown University chapter of the American Medical Student Association.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-pen"></i>
+                    <h2>Editor</h2>
+                    <h4>Brown Journal or Healthcare Advancement</h4>
+                    <h4>Sep 2023 - Jan 2025</h4>
+                    <p>Leading the Brown University chapter of the American Medical Student Association.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-masks-theater"></i>
+                    <h2>Intern</h2>
+                    <h4>Camp Create</h4>
+                    <h4>Aug 2017 - Present</h4>
+                    <p>Leading the Brown University chapter of the American Medical Student Association.</p>
+                </div>
+            </div>
+        </div>
+        <div class="clinical">
+            <h1>Clinical</h1>
+            <div class="exp-list">
+                <div>
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h2>Triage & Medical Translator</h2>
+                    <h4>Express Urgent Care</h4>
+                    <h4>Dec 2023 - Aug 2024</h4>
+                    <p>Conducted research on the impact of AI in clinical settings.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hospital"></i>
+                    <h2>Red Coat Ambassador</h2>
+                    <h4>Wilkes-Barre Veterans Affairs Hospital</h4>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <h2>Observorships</h2>
+                    <h4>Greater Scranton Area</h4>
+                    <h4>Jun 2020 - Present</h4>
+                    <p>
+                        Cardiothoracic Surgery under CT surgeon Dr. Lear Van Koch:<br>
+                        <ul>
+                            <li>Regional Hospital OR in Scranton, PA</li>
+                            <li>Scrubbed in for coronary artery bypass graft (CABG) 
+                                and surgical aortic valve replacement (SAVR)</li>
+                            <li>Observed suture placement, reperfusion machinery, and
+                                surgery team coordination across 2 high-stakes 6hr procedures</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Interventional Cardiology under structural interventionalist Dr. Nishant Sethi:<br>
+                        <ul>
+                            <li>Regional Hospital Cath Lab in Scranton, PA</li>
+                            <li>Scrubbed in for trans-aortic valve replacement (TAVR), 
+                                LAD (widow-maker) femoral catheterization, stent placement, radial catheterization, 
+                                and other interventional procedures</li>
+                            <li>Observed endovascular imaging methods (fluoroscopic capture and cineangiography), 
+                                patient debriefing, and clinical interactions</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Radiation Oncology under radiation oncologist Dr. Thomas Churilla:<br>
+                        <ul>
+                            <li>Private practice in Dunmore, PA</li>
+                            <li>Became familiar with cancer screening equipment (CT & PET scans),
+                                radiation treatment configuration, and Cerner EMR</li>
+                            <li>Learned value of multidisciplinary collaboration
+                                in medicine</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Cardiology under cardiologist Dr. Haitham Abughnia and physician assistant Emily Ketz:<br>
+                        <ul>
+                            <li>Private practice in Clarks Summit, PA</li>
+                            <li>Became familiar cardiovascular imaging, learned cardiac physiology, and observed patient interactions</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Primary care under physician Dr. Susan Baroody:<br>
+                        <ul>
+                            <li>Wright Center for Community Health in Scranton, PA</li>
+                            <li>Learned about primary care procedures, medical records systems,
+                                patient interaction amongst diverse populations, and a wide variety of medical conditions</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Opthalmology under retina surgeon Dr. Sachin B. Patel:<br>
+                        <ul>
+                            <li>Private practice in Clarks Summit, PA</li>
+                            <li>Became familiar w/ ophthalmologic equipment, terminology, and procedure</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
 
 <!-- ---------- portfolio ------------- -->
- <div id="portfolio">
+ <!-- <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
@@ -61,4 +283,6 @@
         </div>
         <a href="#" class="btn">See More</a>
     </div>
- </div>
+ </div> -->
+</body>
+</html>

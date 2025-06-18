@@ -11,19 +11,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/768649c794.js" crossorigin="anonymous"></script>
+    <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+      >
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"
+      />
 </head>
 <body>
 <div id="header-about">
     <div class="container">
         <nav>
             <img src="images/MSP logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="exp.html">Experience</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-light fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
 </div>
@@ -84,3 +113,16 @@
 <div class="copyright">
     Copyright &copy; 2025 - Manan Pancholy.
 </div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
