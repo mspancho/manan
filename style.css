@@ -23,6 +23,13 @@ body{
     background-position: center;
     position: relative;
 }
+#header-about .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensures it sits above the background */
+}
 .container{
     padding: 10px 10%;
 }
@@ -137,6 +144,9 @@ nav ul li a:hover::after{
 
 .about-col-1{
     flex-basis: 35%;
+    display: flex;
+    align-items: center; /* Center the image vertically in its container */
+    justify-content: center; /* Center the image horizontally */
 }
 .about-col-1 img{
     width: 100%;
@@ -186,6 +196,8 @@ nav ul li a:hover::after{
 }
 .tab-contents{
     display: none;
+    height: 500px;
+    overflow-y: auto;
 }
 .tab-contents.active-tab{
     display: block;
@@ -612,6 +624,7 @@ nav .fa-light {
         justify-content: space-between;
         position: relative;
         z-index: 10; /* Ensure nav is above other content */
+        padding: 10px 20px; /* Add some padding for better touch targets */
     }
     
     nav .fa-light{
@@ -639,20 +652,7 @@ nav .fa-light {
         left: 25px;
         z-index: 16; /* X icon should be above everything */
     }
-    
-    /* About page mobile styling */
-    #about{
-        padding-top: 120px;
-        padding-bottom: 40px;
-        z-index: 1; /* Lower than navigation */
-    }
-    
-    #about .container {
-        pointer-events: auto;
-        position: relative;
-        z-index: 2; /* Content should be interactive but below nav */
-    }
-    
+
     .header-text{
         position: relative;
         margin-top: 20%;
@@ -670,40 +670,28 @@ nav .fa-light {
         font-size: 18px; /* Slightly smaller for mobile */
         justify-content: center; /* Center the typewriter content */
     }
-    nav{
-        justify-content: space-between; /* Push logo left and nav bars right */
-    }
-    nav .fa-light{
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        color: #000;
-    }
-    nav ul{
-        background: #b8f7c6;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
     nav ul li{
         display: block;
         margin: 25px;
     }
-    nav ul .fa-light{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-    }
-
+    
     /* About page mobile styling */
+
     #about{
-        padding-top: 120px; /* Add extra top padding to push content below nav */
+        padding-top: 120px;
         padding-bottom: 40px;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    #header-about .container {
+        position: relative;
+    }
+    
+    #about .container {
+        pointer-events: auto;
+        position: relative;
+        z-index: 2;
+        overflow-x: hidden; /* Prevent horizontal scrolling in container */
+        max-width: 100%;
     }
     
     .sub-title{
@@ -714,79 +702,127 @@ nav .fa-light {
     .row{
         flex-direction: column;
         align-items: center;
-        padding-top: 20px; /* Additional spacing from top */
+        padding-top: 20px;
+        overflow-x: hidden; /* Prevent horizontal scrolling in row */
+        max-width: 100%;
     }
     
     .about-col-1, .about-col-2{
         flex-basis: 100%;
         width: 100%;
+        max-width: 100%; /* Ensure columns don't exceed viewport width */
+        overflow-x: hidden; /* Prevent content from overflowing horizontally */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
     
     .about-col-1{
-        order: 1; /* Image appears first */
+        order: 1;
         position: relative;
-        margin-top: 30%;
+        margin-top: 30vh;
         margin-bottom: 3%;
         text-align: center;
+        /* padding: 0 10px; Add padding to prevent edge touching */
     }
     
     .about-col-1 img{
-        width: 80%; /* Make image smaller on mobile */
-        width: 300px;
-        height: auto; /* Maintain aspect ratio */
+        width: 90%; /* Make image responsive */
+        max-width: 300px; /* Maximum size */
+        min-width: 200px; /* Minimum size for very small screens */
+        height: auto;
         border-radius: 10px;
-        text-align: center;
     }
     
     .about-col-2{
-        order: 2; /* Text content appears second */
+        order: 2;
         font-size: 14px;
+        padding: 0 15px; /* Add padding for text readability */
+        overflow-wrap: break-word; /* Break long words if needed */
+        word-wrap: break-word; /* Fallback for older browsers */
+    }
+
+    @media only screen and (max-width: 900px) {
+        /* Horizontally scrollable tab-links only */
+        .tab-titles{
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 20px;
+            margin: 20px 0 40px;
+            padding-bottom: 10px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE */
+            white-space: nowrap; /* Prevent wrapping */
+        }
+        
+        /* Hide scrollbar for webkit browsers */
+        .tab-titles::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .tab-links{
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            margin-right: 0; /* Remove margin since we're using gap */
+            white-space: nowrap; /* Prevent text wrapping */
+            flex-shrink: 0; /* Prevent shrinking */
+            min-width: fit-content; /* Ensure tab text doesn't get cut off */
+        }
+        
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #b54769;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        
+        .tab-links.active-link::after{
+            width: 100%;
+        }
+        
+        /* Tab content remains as is - no horizontal scrolling */
+        .tab-contents{
+            display: none;
+            height: 400px;
+            overflow-y: auto;
+        }
+        
+        .tab-contents.active-tab{
+            display: block;
+        }
+    }
+
+    
+    /* Additional breakpoint for very small screens */
+    @media only screen and (max-width: 480px) {
+        .about-col-1 img{
+            width: 85%;
+            max-width: 250px;
+            min-width: 180px;
+        }
+        
+        .sub-title{
+            font-size: 32px;
+        }
+
+        .tab-contents{
+            height: 300px; /* Smaller minimum height for mobile */
+        }
+        
+        .about-col-2{
+            font-size: 14px;
+            padding: 0 15px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+        }
     }
     
-    /* Horizontally scrollable tabs */
-    .tab-titles{
-        display: flex;
-        overflow-x: auto;
-        overflow-y: hidden;
-        gap: 20px;
-        margin: 20px 0 40px;
-        padding-bottom: 10px;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE */
-    }
-    
-    /* Hide scrollbar for webkit browsers */
-    .tab-titles::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .tab-links{
-        font-size: 16px;
-        margin-right: 0; /* Remove margin since we're using gap */
-        white-space: nowrap; /* Prevent text wrapping */
-        flex-shrink: 0; /* Prevent shrinking */
-        min-width: fit-content;
-    }
-    
-    /* Tab content scrollable if needed */
-    .tab-contents{
-        max-height: 40vh;
-        overflow-y: auto;
-        scrollbar-width: thin;
-    }
-    
-    .tab-contents::-webkit-scrollbar {
-        width: 6px;
-    }
-    
-    .tab-contents::-webkit-scrollbar-thumb {
-        background: #b54769;
-        border-radius: 3px;
-    }
-    .tab-contents ul li{
-        font-size: 14px;
-    }
-    .tab-contents ul li span{
-        font-size: 12px;
-    }
+    /* Rest of your existing mobile styles... */
 }
