@@ -409,6 +409,9 @@ nav ul li a:hover::after{
 .faq{
     flex-basis: 55%; /* how much of left side of screen is taken up */
 }
+.faq .sub-title{
+    padding-bottom: 10px;
+}
 .faq h2{
     font-size: 30px;
     color: #000000;
@@ -615,9 +618,20 @@ nav .fa-light {
     display: none;
 }
 
-@media only screen and (max-width: /*768px*/1316px) {
+@media only screen and (max-width: /*768px*/1316px/*1455px*/) {
     #header-home{
         background-image: url(images/smaller\ background\ with\ headshot-1.jpg);
+    }
+    #nav-overlay {
+        position: static; /* Change from absolute to static */
+        background: transparent; /* Match header background */
+        padding: 0; /* Remove any overlay padding */
+        pointer-events: auto; /* Enable interactions */
+        z-index: 10; /* Keep above other content */
+    }
+    #nav-overlay .container {
+        pointer-events: auto;
+        padding: 10px 10%; /* Standard container padding */
     }
     /* Navigation should be above all content */
     nav{
@@ -678,9 +692,21 @@ nav .fa-light {
     /* About page mobile styling */
 
     #about{
+        top: 0;
+        left: 0;
         padding-top: 120px;
         padding-bottom: 40px;
         overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    #header-about{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/background.jpg);
+        background-size: cover;
+        background-position: center;
     }
     #header-about .container {
         position: relative;
@@ -738,6 +764,212 @@ nav .fa-light {
         padding: 0 15px; /* Add padding for text readability */
         overflow-wrap: break-word; /* Break long words if needed */
         word-wrap: break-word; /* Fallback for older browsers */
+    }
+
+    /* -----------Experience----------- */
+    #experiences {
+        padding: 90px 0 60px 0; /* Less bottom padding to make room for scrollbar */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden;
+        scrollbar-width: thin; /* Show scrollbar on Firefox */
+        -ms-overflow-style: auto; /* Show scrollbar on IE */
+    }
+    
+    /* Show horizontal scrollbar with padding */
+    #experiences::-webkit-scrollbar {
+        height: 12px; /* Height of horizontal scrollbar */
+        display: block;
+    }
+    
+    #experiences::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 6px;
+        margin: 0 20px; /* Padding from edges */
+    }
+    
+    #experiences::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 6px;
+    }
+    
+    #experiences::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    #experiences .container {
+        display: flex;
+        gap: 40px;
+        padding-bottom: 40px; /* Space between content and scrollbar */
+        padding-left: 80px;
+        overflow: visible;
+    }
+    
+    /* Fixed width columns - horizontally scrollable */
+    .employment, .lead-service, .clinical {
+        flex: 0 0 350px; /* Fixed width for each column */
+        display: flex;
+        flex-direction: column;
+        height: 82.5vh; /* Fixed column height */
+    }
+    
+    .employment h1, .lead-service h1, .clinical h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #000;
+    }
+
+    .clinical{
+        padding-right: 50px;
+    }
+    
+    /* Scrollable lists within each column */
+    .exp-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex: 1;
+        padding-right: 10px;
+        scrollbar-width: thin;
+        -ms-overflow-style: auto;
+    }
+    
+    /* Show vertical scrollbars within columns */
+    .exp-list::-webkit-scrollbar {
+        width: 6px;
+        display: block;
+    }
+    
+    .exp-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+    
+    .exp-list::-webkit-scrollbar-thumb {
+        background: #32CD32;
+        border-radius: 3px;
+    }
+    
+    .exp-list::-webkit-scrollbar-thumb:hover {
+        background: #228B22;
+    }
+    
+    /* Fixed width experience blocks - keep original text sizes */
+    .exp-list div {
+        background: #90EE90;
+        padding: 30px; /* Keep original padding */
+        border-radius: 10px;
+        width: 100%;
+        min-height: 200px; /* Keep original minimum height */
+        flex-shrink: 0;
+        transition: background 0.5s;
+        overflow-y: auto; /* Allow scrolling within boxes if needed */
+    }
+    
+    .exp-list div:hover {
+        background: #32CD32;
+    }
+    
+    /* Keep all original text sizes */
+    .exp-list div i {
+        font-size: 40px; /* Original size */
+        margin-bottom: 20px;
+        color: #000;
+        transition: color 0.5s;
+    }
+    
+    .exp-list div h2 {
+        font-size: 22px; /* Original size */
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #000;
+        transition: color 0.5s;
+    }
+    
+    .exp-list div h4 {
+        font-size: 16px; /* Original size */
+        margin-bottom: 8px;
+        color: #333;
+        transition: color 0.5s;
+    }
+    
+    .exp-list div p {
+        color: #000;
+        font-size: 14px; /* Original size */
+        line-height: 1.2;
+        transition: color 0.5s;
+    }
+    
+    .exp-list div ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    .exp-list div ul li {
+        color: #000;
+        font-size: 14px; /* Original size */
+        line-height: 1.15;
+        margin-bottom: 6px;
+    }
+
+    /* FAQ/Contact page mobile styling */
+    .contact {
+        position: absolute;
+        height: 100vh; /* Allow content to determine height */
+        padding-bottom: 40px;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+    
+    .contact .container {
+        pointer-events: auto;
+        height: 100%;
+        overflow-y: auto; /* Enable scrolling within container */
+        padding-top: 60px; /* Fixed distance from header */
+        padding-bottom: 40px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .contact .row {
+        flex-direction: column; /* Stack vertically */
+        align-items: stretch; /* Full width for both sections */
+        gap: 30px; /* Space between faq and contact-right */
+    }
+    
+    .faq, .contact-right {
+        flex-basis: 100%; /* Full width for both sections */
+        width: 100%;
+        max-width: 100%;
+        pointer-events: auto;
+    }
+    
+    .faq {
+        order: 1; /* FAQ appears first */
+        margin-bottom: 20px;
+    }
+    .faq .sub-title{
+        text-align: center;
+    }
+    
+    .contact-right {
+        order: 2; /* Contact form appears second */
+        padding-left: 0; /* Remove left padding for mobile */
+        padding-top: 0; /* Remove top padding */
+        height: auto; /* Auto height instead of fixed 60vh */
+    }
+
+    form input, form textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 15px 0;
+        color: #fff;
+        font-size: 18px; /* Original size */
+        border-radius: 6px;
     }
 
     @media only screen and (max-width: 900px) {
