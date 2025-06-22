@@ -29,6 +29,7 @@ body{
     left: 0;
     width: 100%;
     z-index: 10; /* Ensures it sits above the background */
+    background: transparent;
 }
 .container{
     padding: 10px 10%;
@@ -622,17 +623,6 @@ nav .fa-light {
     #header-home{
         background-image: url(images/smaller\ background\ with\ headshot-1.jpg);
     }
-    #nav-overlay {
-        position: static; /* Change from absolute to static */
-        background: transparent; /* Match header background */
-        padding: 0; /* Remove any overlay padding */
-        pointer-events: auto; /* Enable interactions */
-        z-index: 10; /* Keep above other content */
-    }
-    #nav-overlay .container {
-        pointer-events: auto;
-        padding: 10px 10%; /* Standard container padding */
-    }
     /* Navigation should be above all content */
     nav{
         justify-content: space-between;
@@ -709,7 +699,10 @@ nav .fa-light {
         background-position: center;
     }
     #header-about .container {
-        position: relative;
+        position: absolute;
+        background-image: url(images/navbar.png);
+        background-position: center;
+        background-size: cover;
     }
     
     #about .container {
