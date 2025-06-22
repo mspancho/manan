@@ -1,68 +1,56 @@
+/* -------FONT-------- */
 *{
     margin: 0;
     padding: 0;
     font-family: "Mako";
     box-sizing: border-box;
 }
+
+/* -------HOME-------- */
 body{
-        background-image: url(images/background-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+    background-image: url(images/background-2.jpg);
+    background-size: cover; /* image fills body while maintaining aspect ratio */
+    background-position: center;
+    background-attachment: fixed; /* image stays in place when scrolling */
 }
 #header-home{
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* everything is in the header */
     background-image: url(images/background_with_headshot.jpg);
     background-size: cover;
     background-position: center;
 }
-#header-about{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/background-2.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-#header-about .container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Ensures it sits above the background */
-    background: transparent;
-}
 .container{
     padding: 10px 10%;
 }
+
 /* ------nav bar------ */
 nav{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* put nav elements at start of container */
+    flex-wrap: wrap; /* need navbar to wrap around when not enough space available onscreen */
 }
 .logo{
     width: 70px;
     height: 50px
 }
 nav ul{
-    margin-left: 40px; /* Add space between logo and nav links */
+    margin-left: 40px; /* add space between logo and nav links */
 }
 nav ul li{
-    display: inline-block;
+    display: inline-block; /* keep nav elements on same line */
     list-style: none;
     margin: 10px 20px;
 }
-
 nav ul li a{
     color: #000;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+/* nav element hover animation */
+nav ul li a::after{ 
     content: '';
     width: 0;
     height: 3px;
@@ -74,6 +62,10 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%
+}
+/* navbar icons */
+nav .fa-light {
+    display: none;
 }
 .header-text{
     margin-top: 22%;
@@ -88,6 +80,22 @@ nav ul li a:hover::after{
 .header-text span{
     color: #1f6fb0;
 }
+/* --------social icons--------- */
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #000000;
+    display: inline-block;
+    transition: color 0.5s;
+}
+.social-icons a:hover{
+    color: #4174d2;
+    /* transform: translateY(-5px); */
+}
 /* --------typewriter effect-------- */
 .typewriter {
     font-size: 25px;
@@ -95,13 +103,11 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
 }
-
 .typewriter .static-text {
-    color: #000 !important;
+    color: #000 !important; /* needs to remain black please */
 }
-
 #typewriter-text {
-    color: #1f6fb0;
+    color: #1f6fb0; 
 }
 .cursor {
     color: #1f6fb0;
@@ -114,17 +120,31 @@ nav ul li a:hover::after{
 }
 
 /* --------ABOUT--------- */
+/* ---------header--------- */
+#header-about{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background-2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+#header-about .container{
+    position: absolute; /* need to keep container exactly where it is for all other pages */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* navbar should be above the background */
+}
+/* ---------rest of page content---------- */
 #about{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 80px 0;
+    padding: 80px 0; /* need top padding */
     margin-top: 10px;
-    color: #000000;
-    background: transparent;
-    pointer-events: none;
     display: flex;
     align-items: center;
 }
@@ -134,17 +154,16 @@ nav ul li a:hover::after{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* space b/tw about cols */
     flex-wrap: wrap;
 }
 #about .container {
-    pointer-events: auto;
+    pointer-events: auto; 
 }
-
 .about-col-1, .about-col-2{
-    pointer-events: auto;
+    pointer-events: auto; /* just in case */
 }
-
+/* about column 1 (image) */
 .about-col-1{
     flex-basis: 35%;
     display: flex;
@@ -155,20 +174,20 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 15px;
 }
+/* about columns 2 (text) */
 .about-col-2{
     flex-basis: 60%;
 }
-
 .sub-title{
     font-size: 60px;
     font-weight: 600;
     color: #000000;
 }
-
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
 }
+/* tab links click animation */
 .tab-links{
     margin-right: 50px;
     font-size: 18px;
@@ -180,7 +199,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #b54769;
+    background: #b54769; /* keep red theme similar to image */
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -209,22 +228,22 @@ nav ul li a:hover::after{
 /* -----PROJECTS----- */
 #projects{
     position: absolute;
-    top: 00;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     padding: 100px 0 80px 0;
-    margin-top: 10px;
+    margin-top: 20px;
     background: transparent;
     pointer-events: none;
     display: flex;
     align-items: center;
-    overflow: hidden; /* Prevent vertical scrolling */
+    overflow: hidden; /* prevent vertical scrolling */
 }
 #projects .container {
     pointer-events: auto;
     width: 100%;
-    overflow: hidden; /* Contain the horizontal scroll within the container */
+    overflow: hidden; /* contain the horizontal scroll within the container */
 }
 #projects h3{
     font-size: 20px;
@@ -235,22 +254,21 @@ nav ul li a:hover::after{
 .projects-list{
     display: flex;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: hidden; /* no need for vertical scroll */
     gap: 30px;
     margin-top: 40px;
     pointer-events: auto;
     padding-bottom: 10px;
     scroll-behavior: smooth;
     max-width: 100%; 
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; /* for Edge */
 }
-
-/* Hide scrollbar for webkit browsers */
+/* hide scrollbar for webkit browsers */
 .projects-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
 }
-.projects-list::-webkit-scrollbar-track {
+/* .projects-list::-webkit-scrollbar-track {
     background: transparent;
 }
 .projects-list::-webkit-scrollbar-thumb {
@@ -259,16 +277,15 @@ nav ul li a:hover::after{
 }
 .projects-list::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
-}
-
+} */
 .projects-list div{
     background: #b3cfe3;
     padding: 40px;
     border-radius: 13px;
     height: 65vh;
-    min-width: 290px;
-    max-width: 350px; /* Limit maximum width */
-    flex-shrink: 0;
+    min-width: 290px; /* specific box size */
+    max-width: 350px; /* "" */
+    flex-shrink: 0; /* whatever you do DON'T shrink */
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, color 0.5s/*, transform 0.5s*/;
@@ -277,18 +294,15 @@ nav ul li a:hover::after{
     font-size: 50px;
     margin-bottom: 30px;
     color: #000;
-    transition: color 0.5s;
 }
 .projects-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
     color: #000;
-    transition: color 0.5s;
 }
 .projects-list div p{
     color: #000;
-    transition: color 0.5s;
 }
 .projects-list div p span{
     color: #be431b;
@@ -303,7 +317,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 .projects-list div:hover{
-    background: #6abdf7;
+    background: #6abdf7; /* background gets marginally darker */
     color: #000;
     /* transform: translateY(-10px); */
 }
@@ -312,6 +326,7 @@ nav ul li a:hover::after{
     /* transform: translateY(-10px); */
 }
 
+/* ----------SCRAPPED PORTFOLIO PAGE------------ */
 /* ------portfolio----- */
 /* #portfolio{
     padding: 50px 0;
@@ -371,7 +386,7 @@ nav ul li a:hover::after{
 }
 .work:hover .layer{
     height: 100%;
-} */
+}
 .btn{
     display: block;
     margin: 50px auto;
@@ -380,14 +395,111 @@ nav ul li a:hover::after{
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #000;
     transition: 0.5s;
 }
 .btn:hover{
-    background: #4174d2
+    background: #4174d2;
+    color: #fff;
+} */
+
+/* -----EXPERIENCES----- */
+#experiences{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 90px 0 80px 0;
+    background: transparent;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+#experiences .container {
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 40px; /* gap b/tw columns */
+    overflow: hidden; /* columns appear upon horizontal scroll */
+}
+/* 3 main columns */
+.employment, .lead-service, .clinical {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.employment h1, .lead-service h1, .clinical h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+/* scrollable lists within each column */
+.exp-list {
+    display: flex;
+    flex-direction: column; /* lists are within a columns, unlike projects */
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding-right: 10px;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; /* for Internet Explorer 10+ */
+}
+/* hide scrollbar for webkit browsers */
+.exp-list::-webkit-scrollbar {
+    display: none;
+}
+/* individual experience blocks */
+.exp-list div {
+    background: #90EE90;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 200px;
+    flex-shrink: 0; /* whatever you do DON'T shrink */
+    transition: background 0.5s, transform 0.5s;
+}
+.exp-list div ul { /* lists */
+    margin: 10px 0;
+    padding-left: 20px; /* create indent */
+}
+.exp-list div ul li { /* list items */
+    color: #000;
+    font-size: 14px;
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+.exp-list div i { /* icons */
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #000;
+}
+.exp-list div h2 { /* title */
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000;
+}
+.exp-list div h4 { /* major details */
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+.exp-list div p { /* general description */
+    color: #000;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: color 0.5s;
+}
+.exp-list div:hover {
+    background: #32CD32; /* darker green on hover */
+    /* transform: translateY(-5px); */
 }
 
-/* ------CONTACT------ */
+/* ------CONTACT (FAQ)------ */
 .contact{
     position: absolute;
     top: 0;
@@ -400,17 +512,15 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
 }
-
 .contact .container {
     pointer-events: auto;
 }
-
 .faq, .contact-right{
     pointer-events: auto;
 }
-
+/* FAQ side */
 .faq{
-    flex-basis: 55%; /* how much of left side of screen is taken up */
+    flex-basis: 55%; /* how much of left side of screen is taken up by FAQ */
 }
 .faq .sub-title{
     padding-bottom: 10px;
@@ -436,38 +546,14 @@ nav ul li a:hover::after{
     font-size: 18px;
 }
 .faq .question{
-    margin-top: 10px;
+    margin-top: 10px; /* space above questions */
     color: #000;
 }
 .faq p{
     margin-top: 10px;
     color: #4e4e4e
 }
-.contact-left p i{
-    color: #4174d2;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-    
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #000000;
-    display: inline-block;
-    transition: color 0.5s;
-}
-.social-icons a:hover{
-    color: #4174d2;
-    /* transform: translateY(-5px); */
-}
-.btn.btn2{
-    display: inline-block;
-    background: #4174d2;
-}
+/* contact form side */
 .contact-right h1{
     color: #000000;
 }
@@ -488,158 +574,47 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-form .btn2{
+form .btn.btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
+    border: 1px solid #4174d2;
+    border-radius: 6px;
+    background: transparent;
     cursor: pointer;
+    transition: 0.5s;
 }
-.copyright{
+form .btn.btn2:hover{
+    background: #4174d2;
+    color: #fff;
+}
+/* .copyright{
     width: 100%;
     text-align: center;
     padding: 25px 0;
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
-}
-
-/* -----EXPERIENCES----- */
-#experiences{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 90px 0 80px 0;
-    background: transparent;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-}
-
-#experiences .container {
-    pointer-events: auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 40px;
-    overflow: hidden;
-}
-
-/* Three main columns */
-.employment, .lead-service, .clinical {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.employment h1, .lead-service h1, .clinical h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #000;
-}
-
-/* Scrollable lists within each column */
-.exp-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex: 1;
-    padding-right: 10px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-/* Hide scrollbar for webkit browsers */
-.exp-list::-webkit-scrollbar {
-    display: none;
-}
-
-/* Individual experience blocks */
-.exp-list div {
-    background: #90EE90;
-    padding: 30px;
-    border-radius: 10px;
-    min-height: 200px;
-    flex-shrink: 0;
-    transition: background 0.5s, transform 0.5s;
-}
-
-
-.exp-list div ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.exp-list div ul li {
-    color: #000;
-    font-size: 14px;
-    line-height: 1.15;
-    margin-bottom: 6px;
-}
-
-.exp-list div:hover {
-    background: #32CD32; /* Darker green on hover */
-    /* transform: translateY(-5px); */
-}
-
-.exp-list div i {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #000;
-    transition: color 0.5s;
-}
-
-.exp-list div h2 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #000;
-    transition: color 0.5s;
-}
-
-.exp-list div h4 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #333;
-    transition: color 0.5s;
-}
-
-.exp-list div p {
-    color: #000;
-    font-size: 14px;
-    line-height: 1.2;
-    transition: color 0.5s;
-}
-
-/* nav icons */
-nav .fa-light {
-    display: none;
-}
+} */
 
 @media only screen and (max-width: /*768px*/1455px) {
     #header-home{
         background-image: url(images/smaller\ background\ with\ headshot-1.jpg);
     }
+
     /* Nav should be above all content */
     nav{
         justify-content: space-between;
         position: relative;
-        z-index: 10; /* Ensure nav is above other content */
-        padding: 10px 20px; /* Easier to find touch target */
+        z-index: 10; /* ensure nav is above other content */
+        padding: 10px 20px; /* easier to find click target */
     }
-    
     nav .fa-light{
         display: block;
         font-size: 25px;
         cursor: pointer;
         color: #000;
     }
-    
     nav ul{
         background: #b8f7c6;
         position: fixed;
@@ -648,17 +623,15 @@ nav .fa-light {
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 15; /* Mobile menu should be above everything */
+        z-index: 15; /* mobile menu should be above everything */
         transition: right 0.5s;
     }
-
     nav ul .fa-light{
         position: absolute;
         top: 25px;
         left: 25px;
         z-index: 16; /* X icon should be above everything */
     }
-
     .header-text{
         position: relative;
         margin-top: 20%;
@@ -673,22 +646,21 @@ nav .fa-light {
         font-size: 57.5px;
     }
     .typewriter {
-        font-size: 18px; /* Slightly smaller for mobile */
-        justify-content: center; /* Center the typewriter content */
+        font-size: 18px; /* slightly smaller for mobile */
+        justify-content: center; /* center the typewriter content */
     }
     nav ul li{
         display: block;
         margin: 25px;
     }
     
-    /* About page mobile styling */
-
+    /* ABOUT */
     #about{
         top: 0;
         left: 0;
         padding-top: 120px;
         padding-bottom: 40px;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-x: hidden; /* prevent horizontal scrolling */
     }
     #header-about{
         position: absolute;
@@ -706,118 +678,102 @@ nav .fa-light {
         background-position: center;
         background-size: cover;
     }
-    
     #about .container {
         pointer-events: auto;
         position: relative;
         z-index: 2;
-        overflow-x: hidden; /* Prevent horizontal scrolling in container */
+        overflow-x: hidden; /* prevent horizontal scrolling in container */
         max-width: 100%;
     }
-    
     .sub-title{
         font-size: 40px;
     }
-    
-    /* Single column layout - stack vertically */
+    /* single column layout - stack vertically */
     .row{
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
-        overflow-x: hidden; /* Prevent horizontal scrolling in row */
+        overflow-x: hidden; /* prevent horizontal scrolling in row */
         max-width: 100%;
     }
-    
     .about-col-1, .about-col-2{
         flex-basis: 100%;
         width: 100%;
-        max-width: 100%; /* Ensure columns don't exceed viewport width */
-        overflow-x: hidden; /* Prevent content from overflowing horizontally */
-        box-sizing: border-box; /* Include padding in width calculation */
+        max-width: 100%; /* columns don't exceed viewport width */
+        overflow-x: hidden; /* prevent content from overflowing horizontally */
+        box-sizing: border-box;
     }
-    
     .about-col-1{
         order: 1;
         position: relative;
         margin-top: 40vh;
         margin-bottom: 3%;
         text-align: center;
-        /* padding: 0 10px; Add padding to prevent edge touching */
+        /* padding: 0 10px; padding to prevent edge touching */
     }
-    
     .about-col-1 img{
-        width: 90%; /* Make image responsive */
-        max-width: 300px; /* Maximum size */
-        min-width: 200px; /* Minimum size for very small screens */
+        width: 90%; /* make image responsive */
+        max-width: 300px; /* max size */
+        min-width: 200px; /* min size for very small screens */
         height: auto;
         border-radius: 10px;
     }
-    
     .about-col-2{
         order: 2;
         font-size: 14px;
-        padding: 0 15px; /* Add padding for text readability */
-        overflow-wrap: break-word; /* Break long words if needed */
-        word-wrap: break-word; /* Fallback for older browsers */
+        padding: 0 15px; /* padding for text readability */
+        overflow-wrap: break-word; /* break long words if needed */
+        word-wrap: break-word; /* fallback for older browsers */
     }
 
-    /* -----------Experience----------- */
+    /* EXPERIENCE */
     #experiences {
-        padding: 90px 0 60px 0; /* Less bottom padding to make room for scrollbar */
-        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 90px 0 60px 0; /* less bottom padding to make room for scrollbar */
+        overflow-x: auto; /* allow horizontal scrolling */
         overflow-y: hidden;
-        scrollbar-width: thin; /* Show scrollbar on Firefox */
-        -ms-overflow-style: auto; /* Show scrollbar on IE */
+        scrollbar-width: thin; /* show scrollbar on Firefox */
+        -ms-overflow-style: auto; /* show scrollbar on Internet Explorer 10+ */
     }
-    
     /* Show horizontal scrollbar with padding */
     #experiences::-webkit-scrollbar {
-        height: 12px; /* Height of horizontal scrollbar */
+        height: 12px; /* height of horizontal scrollbar */
         display: block;
     }
-    
     #experiences::-webkit-scrollbar-track {
         background: #f1f1f1;
         border-radius: 6px;
-        margin: 0 20px; /* Padding from edges */
+        margin: 0 20px; /* padding from edges */
     }
-    
     #experiences::-webkit-scrollbar-thumb {
         background: #888;
         border-radius: 6px;
     }
-    
     #experiences::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
-    
     #experiences .container {
         display: flex;
         gap: 40px;
-        padding-bottom: 40px; /* Space between content and scrollbar */
+        padding-bottom: 40px; /* space between content and scrollbar */
         padding-left: 80px;
         overflow: visible;
     }
-    
-    /* Fixed width columns - horizontally scrollable */
+    /* horizontally scrollable columns */
     .employment, .lead-service, .clinical {
-        flex: 0 0 350px; /* Fixed width for each column */
+        flex: 0 0 350px; /* fixed column width */
         display: flex;
         flex-direction: column;
-        height: 82.5vh; /* Fixed column height */
+        height: 82.5vh; /* fixed column height */
     }
-    
     .employment h1, .lead-service h1, .clinical h1 {
         margin-bottom: 20px;
         text-align: center;
         color: #000;
     }
-
     .clinical{
-        padding-right: 50px;
+        padding-right: 50px; /* temporary fix for padding  disappearing on horizontal scroll on smaller screens */
     }
-    
-    /* Scrollable lists within each column */
+    /* vertically scollrable lists within each column */
     .exp-list {
         display: flex;
         flex-direction: column;
@@ -829,28 +785,22 @@ nav .fa-light {
         scrollbar-width: thin;
         -ms-overflow-style: auto;
     }
-    
-    /* Show vertical scrollbars within columns */
-    .exp-list::-webkit-scrollbar {
+    .exp-list::-webkit-scrollbar { /* show vertical scrollbars within columns */
         width: 6px;
-        display: block;
+        display: block; 
     }
-    
     .exp-list::-webkit-scrollbar-track {
         background: #f1f1f1;
         border-radius: 3px;
     }
-    
     .exp-list::-webkit-scrollbar-thumb {
         background: #32CD32;
         border-radius: 3px;
     }
-    
     .exp-list::-webkit-scrollbar-thumb:hover {
         background: #228B22;
     }
-    
-    /* Fixed width experience blocks - keep original text sizes */
+    /* fixed width experience blocks - keep original text sizes */
     .exp-list div {
         background: #90EE90;
         padding: 30px; /* Keep original padding */
@@ -861,19 +811,12 @@ nav .fa-light {
         transition: background 0.5s;
         overflow-y: auto; /* Allow scrolling within boxes if needed */
     }
-    
-    .exp-list div:hover {
-        background: #32CD32;
-    }
-    
-    /* Keep all original text sizes */
     .exp-list div i {
         font-size: 40px; /* Original size */
         margin-bottom: 20px;
         color: #000;
         transition: color 0.5s;
     }
-    
     .exp-list div h2 {
         font-size: 22px; /* Original size */
         font-weight: 500;
@@ -881,26 +824,22 @@ nav .fa-light {
         color: #000;
         transition: color 0.5s;
     }
-    
     .exp-list div h4 {
         font-size: 16px; /* Original size */
         margin-bottom: 8px;
         color: #333;
         transition: color 0.5s;
     }
-    
     .exp-list div p {
         color: #000;
         font-size: 14px; /* Original size */
         line-height: 1.2;
         transition: color 0.5s;
     }
-    
     .exp-list div ul {
         margin: 10px 0;
         padding-left: 20px;
     }
-    
     .exp-list div ul li {
         color: #000;
         font-size: 14px; /* Original size */
@@ -908,7 +847,7 @@ nav .fa-light {
         margin-bottom: 6px;
     }
 
-    /* FAQ/Contact page mobile styling */
+    /* CONTACT (FAQ) */
     .contact {
         position: absolute;
         height: 100vh; /* Allow content to determine height */
@@ -916,7 +855,6 @@ nav .fa-light {
         overflow-x: hidden; /* Prevent horizontal scrolling */
         overflow-y: auto; /* Enable vertical scrolling */
     }
-    
     .contact .container {
         pointer-events: auto;
         height: 100%;
@@ -926,7 +864,6 @@ nav .fa-light {
         padding-left: 10%;
         padding-right: 10%;
     }
-    
     .contact .row {
         flex-direction: column; /* Stack vertically */
         align-items: stretch; /* Full width for both sections */
@@ -967,6 +904,7 @@ nav .fa-light {
         border-radius: 6px;
     }
 
+    /* Need extra media queries for About page */
     @media only screen and (max-width: 900px) {
         /* Horizontally scrollable tab-links only */
         .tab-titles{
@@ -978,10 +916,10 @@ nav .fa-light {
             padding-bottom: 10px;
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* IE */
-            white-space: nowrap; /* Prevent wrapping */
+            white-space: nowrap; /* no wrapping */
         }
         
-        /* Hide scrollbar for webkit browsers */
+        /* hide scrollbar for webkit browsers */
         .tab-titles::-webkit-scrollbar {
             display: none;
         }
@@ -991,10 +929,10 @@ nav .fa-light {
             font-weight: 500;
             cursor: pointer;
             position: relative;
-            margin-right: 0; /* Remove margin since we're using gap */
-            white-space: nowrap; /* Prevent text wrapping */
-            flex-shrink: 0; /* Prevent shrinking */
-            min-width: fit-content; /* Ensure tab text doesn't get cut off */
+            margin-right: 0; /* remove margin bc of gap */
+            white-space: nowrap; /* no text wrapping */
+            flex-shrink: 0; /* whatever you do DON'T shrink */
+            min-width: fit-content; /* tab text shouldn't get cut off */
         }
         
         .tab-links::after{
@@ -1025,7 +963,7 @@ nav .fa-light {
     }
 
     
-    /* Additional breakpoint for very small screens */
+    /* another breakpoint for very small screens */
     @media only screen and (max-width: 480px) {
         .about-col-1 img{
             width: 85%;
@@ -1038,7 +976,7 @@ nav .fa-light {
         }
 
         .tab-contents{
-            height: 300px; /* Smaller minimum height for mobile */
+            height: 300px; /* smaller minimum height for mobile */
         }
         
         .about-col-2{
