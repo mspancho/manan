@@ -18,7 +18,7 @@ body{
 #header-about{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.jpg);
+    background-image: url(images/background-2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -619,16 +619,16 @@ nav .fa-light {
     display: none;
 }
 
-@media only screen and (max-width: /*768px*/1316px/*1455px*/) {
+@media only screen and (max-width: /*768px*/1455px) {
     #header-home{
         background-image: url(images/smaller\ background\ with\ headshot-1.jpg);
     }
-    /* Navigation should be above all content */
+    /* Nav should be above all content */
     nav{
         justify-content: space-between;
         position: relative;
         z-index: 10; /* Ensure nav is above other content */
-        padding: 10px 20px; /* Add some padding for better touch targets */
+        padding: 10px 20px; /* Easier to find touch target */
     }
     
     nav .fa-light{
@@ -694,7 +694,7 @@ nav .fa-light {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-image: url(images/background.jpg);
+        background-image: url(images/background-3.png);
         background-size: cover;
         background-position: center;
     }
@@ -737,7 +737,7 @@ nav .fa-light {
     .about-col-1{
         order: 1;
         position: relative;
-        margin-top: 30vh;
+        margin-top: 40vh;
         margin-bottom: 3%;
         text-align: center;
         /* padding: 0 10px; Add padding to prevent edge touching */
