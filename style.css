@@ -5,8 +5,10 @@
     box-sizing: border-box;
 }
 body{
-    background: #080808;
-    color: #fff;
+        background-image: url(images/background-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
 }
 #header-home{
     width: 100%;
@@ -1048,6 +1050,13 @@ nav .fa-light {
             flex-direction: column;
         }
     }
+
+    #about, #projects, #experiences, .contact {
+        min-height: 100vh;
+    }
     
-    /* Rest of your existing mobile styles... */
+    #header-about {
+        min-height: 100vh;
+        height: auto;
+    }
 }
