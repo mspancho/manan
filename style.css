@@ -468,31 +468,34 @@ nav .fa-light {
 }
 .exp-list div ul li { /* list items */
     color: #000;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.15;
     margin-bottom: 6px;
 }
 .exp-list div i { /* icons */
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 20px;
     color: #000;
 }
 .exp-list div h2 { /* title */
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #000;
 }
 .exp-list div h4 { /* major details */
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 8px;
     color: #333;
 }
 .exp-list div p { /* general description */
     color: #000;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.2;
     transition: color 0.5s;
+}
+.exp-list a{
+    text-decoration: none;
 }
 .exp-list div:hover {
     background: #32CD32; /* darker green on hover */
