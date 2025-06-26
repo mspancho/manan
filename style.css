@@ -287,7 +287,6 @@ nav .fa-light {
     max-width: 350px; /* "" */
     flex-shrink: 0; /* whatever you do DON'T shrink */
     font-weight: 300;
-    border-radius: 10px;
     transition: background 0.5s, color 0.5s/*, transform 0.5s*/;
 }
 .projects-list div i{
@@ -599,10 +598,15 @@ form .btn.btn2:hover{
     font-weight: 300;
     margin-top: 20px;
 } */
+#msg{
+    color: #4bba38;
+    margin-top: 5px;
+    display: block;
+}
 
 @media only screen and (max-width: /*768px*/1455px) {
     #header-home{
-        background-image: url(images/smaller\ background\ with\ headshot-1.jpg);
+        background-image: url(images/background-2.png);
     }
 
     /* Nav should be above all content */
@@ -729,6 +733,57 @@ form .btn.btn2:hover{
         word-wrap: break-word; /* fallback for older browsers */
     }
 
+    /* PROJECTS */
+    #projects {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* fill viewport */
+        padding: 120px 0 40px 0; /* top padding for nav, bottom for spacing */
+        background: transparent;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden; /* prevent overlay from expanding */
+    }
+    #projects .container {
+        pointer-events: auto;
+        flex: 1;
+        overflow-y: auto; /* enable vertical scrolling within the container */
+        overflow-x: auto; /* enable horizontal scrolling within the container */
+        z-index: 2;
+    }
+    .projects-list {
+        display: flex;
+        flex-direction: column; /* stack projects vertically */
+        gap: 30px;
+        margin-top: 40px;
+        padding-bottom: 40px; /* extra space at bottom */
+    }
+    .projects-list div {
+        background: #b3cfe3;
+        padding: 40px;
+        border-radius: 13px;
+        min-height: 300px; /* minimum height for consistency */
+        width: 100%; /* full width for mobile */
+        max-width: none; /* remove max-width restriction */
+        flex-shrink: 0; /* whatever you do DON'T shrink */
+        font-weight: 300; /* keep original font weight */
+        overflow: hidden; /* rounded corners appear properly */
+        transition: background 0.5s, color 0.5s; /* keep existing fx */
+    }
+    .projects-list div:hover {
+        background: #6abdf7;
+        color: #000;
+    }
+    #projects h3 {
+        font-size: 20px;
+        color: #4e4e4e;
+        margin-bottom: 20px;
+    }
+
     /* EXPERIENCE */
     #experiences {
         padding: 90px 0 60px 0; /* less bottom padding to make room for scrollbar */
@@ -758,7 +813,7 @@ form .btn.btn2:hover{
         display: flex;
         gap: 40px;
         padding-bottom: 40px; /* space between content and scrollbar */
-        padding-left: 80px;
+        padding-left: 50px; /* not as much left padding needed on mobile */
         overflow: visible;
     }
     /* horizontally scrollable columns */
