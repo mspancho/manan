@@ -167,8 +167,8 @@ nav .fa-light {
 .about-col-1{
     flex-basis: 35%;
     display: flex;
-    align-items: center; /* Center the image vertically in its container */
-    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* center the image vertically in its container */
+    justify-content: center; /* center the image horizontally */
 }
 .about-col-1 img{
     width: 100%;
@@ -581,6 +581,7 @@ form .btn.btn2{
     font-size: 18px;
     margin-top: 20px;
     border: 1px solid #4174d2;
+    color: #000;
     border-radius: 6px;
     background: transparent;
     cursor: pointer;
@@ -645,7 +646,7 @@ form .btn.btn2:hover{
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
-        margin-top: 10vh;
+        margin-top: 22vh;
         font-size: 16px;
         text-align: center;
     }
@@ -1023,6 +1024,7 @@ form .btn.btn2:hover{
     
     /* another breakpoint for very small screens */
     @media only screen and (max-width: 480px) {
+        /* ABOUT */
         .about-col-1 img{
             width: 85%;
             max-width: 250px;
@@ -1044,6 +1046,11 @@ form .btn.btn2:hover{
             word-wrap: break-word;
             display: flex;
             flex-direction: column;
+        }
+
+        /* PROJECTS */
+        .projects-list div {
+            height: auto; /* allow height to adjust based on content */
         }
     }
 
