@@ -288,6 +288,8 @@ nav .fa-light {
     flex-shrink: 0; /* whatever you do DON'T shrink */
     font-weight: 300;
     transition: background 0.5s, color 0.5s/*, transform 0.5s*/;
+    display: flex;
+    flex-direction: column;
 }
 .projects-list div i{
     font-size: 50px;
@@ -302,6 +304,16 @@ nav .fa-light {
 }
 .projects-list div p{
     color: #000;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+.projects-list div p::-webkit-scrollbar {
+    display: none;
+}
+.projects-list div p {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .projects-list div p span{
     color: #be431b;
