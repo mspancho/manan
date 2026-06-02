@@ -66,24 +66,44 @@
 <script>
 const phrases = [
     "multimodal learning.",
+    "self-supervised learning.",
     "health informatics.",
     "patient care.",
     "in-silico drug design.",
     "NLP.",
     "vocal music.",
+    "vocal arrangement.",
     "new frontiers in AI.",
+    "co-intelligent systems.",
     "human health.",
-    "medical research.",
+    "biomedical research.",
     "data science.",
     "cardiology.",
     "ophthalmology.",
     "gastroenterology.",
+    "precision psychiatry.",
+    "narrative medicine.",
+    "clinical validation methods.",
+    "medical education's future.",
+    "implementation science.",
+    "clinical workflow.",
+    "effective mentorship.",
+    "effective mentorship.",
+    "veggie burger recipes.",
 ];
 
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
 const typewriterElement = document.getElementById('typewriter-text');
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 function typeWriter() {
     const currentPhrase = phrases[currentPhraseIndex];
@@ -111,7 +131,10 @@ function typeWriter() {
 }
 
 // Start the animation when page loads
-document.addEventListener('DOMContentLoaded', typeWriter);
+document.addEventListener('DOMContentLoaded', () => {
+    shuffle(phrases);
+    typeWriter();
+});
 </script>
 
 <script>
