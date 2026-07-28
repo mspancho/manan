@@ -1,136 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
-</head>
-<body>
-<div id="header-about">
-    <!-- Placeholder for background -->
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Mako&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>About</title>
+</head><body>
+  <header class="site-header">
     <div class="container">
-        <nav>
-            <img src="images/MSP logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="exp.html">Experience</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-light fa-bars" onclick="openmenu()"></i>
-        </nav>
+      <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
+        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-</div>
-
-<!-- -------------about------------- -->
-<div id="about">
+  </header>
+  <nav id="menu-overlay" aria-label="Main menu">
+    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark"></i></button>
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/manan_chaht.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>I am a rising senior at Brown University studying Artificial Intelligence in Health Informatics. 
+      <a style="--i:0" href="index.html">Home</a>
+      <a style="--i:1" href="about.html">About</a>
+      <a style="--i:2" href="projects.html">Projects</a>
+      <a style="--i:3" href="exp.html">Experience</a>
+      <a style="--i:4" href="faq.html">FAQ</a>
+    </div>
+  </nav>
+  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
+    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  </a>
+  <main>
+    <section class="band about-band">
+      <div class="container about-grid reveal-group">
+        <div class="about-col-1" style="--i:0">
+          <img src="images/opt/manan_chaht.jpg" alt="Manan Pancholy">
+        </div>
+        <div class="about-col-2" style="--i:1">
+          <h1 class="display">About Me</h1>
+          <p>I am a rising senior at Brown University studying Artificial Intelligence in Health Informatics.
                     I seek to leverage data to its fullest potential to improve human health, whether that means
                     helping patients, physicians, or healthcare systems.</p>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Toolbox</p>
-                    <p class="tab-links" onclick="opentab('interests')">Interests</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
-                    <p class="tab-links" onclick="opentab('awards')">Awards</p>
-                    <p class="tab-links" onclick="opentab('certs')">Certifications</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Python AI/ML</span><br>PyTorch (+ Lightning, Geometric), Scikit-learn, Tensorflow, HuggingFace (Transformers, Datasets)</li>
-                        <li><span>Data Wrangling & Visualization</span><br>SQL, NumPy, Unix, Matplotlib, Seaborn, spaCy, Julia</li>
-                        <li><span>Biostatistics</span><br>Stata, SPSS, R</li>
-                        <li><span>Cheminformatics</span><br>RDKit, Biopandas</li>
-                        <li><span>Developer Tools</span><br>GitHub, VS Code, WandB, Docker, Jupyter Notebook</li>
-                        <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
-                        <li><span>Medical Ontologies</span><br>ICD, OMOP, SNOMED, UMLS</li>
-                        <li><span>Languages</span><br>English, Spanish, Gujarati</li>
-                        <li><span>Miscellaneous</span><br>Vocal Music (A Cappella & Hindustani Classical), Beatboxing, Photography</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="interests">
-                    <ul>
-                        <li><span>Multimodal Learning</span><br>Integration of image, video, and sequence data for prediction/inference</li>
-                        <li><span>Self-Supervised Learning</span><br>MoCo, world models, clinical foundation models, latent space prediction</li>
-                        <li><span>Real-Time Data Streams</span><br>Streaming inference from continuous physiological waveform & video data</li>
-                        <li><span>Graph Representations</span><br>Knowledge Graphs, Graph Neural Networks</li>
-                        <li><span>Natural Language Processing</span><br>Text mining, information extraction, and knowledge discovery</li>
-                        <li><span>Learning Health Systems</span><br>Data for one patient informs care of the next, Charles Friedman</li>
-                        <li><span>Patient Care</span><br>Building longitudinal relationships through vulnerability, narrative medicine</li>
-                        <li><span>In-Silico Drug Design</span><br>AI for drug discovery, repurposing, and development</li>
-                        <li><span>Innovation</span><br>SaMD, Wearables for public health & preventative care</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>Brown University</span><br>Artificial Intelligence in Health Informatics, ScB.<br>2023-2027</li>
-                        <li><span>Abington Heights High School</span><br>2019-2023</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="coursework">
-                    <ul>
-                        <li><span>Deep Learning, SSL, NLP</span><br>MAE, MoCo, ViTs, MLPs, CNNs, RNNs (LSTM/GRU), Transformers, REINFORCE, Diffusion </li>
-                        <li><span>Computational Biology</span><br>MCMC, Haplotype phasing, HMMs, AlphaFold, LD, GWAS</li>
-                        <li><span>Health Informatics</span><br>JuliaLang, OMOP CDM, HL7 FHIR, Evaluation Methods, Sociotechnical systems</li>
-                        <li><span>Physiology (w/ Lab)</span><br>Circulatory, Renal, GI, Somatic Motor,Pathophysiology</li>
-                        <li><span>Biochemistry</span><br>Metabolic Pathways, Regulation, Protein Structure, Visualization</li>
-                        <li><span>Chemistry (w/ Lab)</span><br>Organic Chemistry (I & II), Inorganic Chemistry, Lab Techniques (NMR, GC-MS, TLC)</li>
-                        <li><span>Mathematics</span><br>Calculus-Based Statistics, Linear Algebra, Biostatistics, Decision Theory, Mechanics</li>
-                        <li><span>Computational Theory</span><br>Discrete Math, Data Structures & Algorithms, Time Complexity</li>
-                        <li><span>Humanities</span><br>Medical Anthropology, Creative Nonfiction, Academic Essay-Writing</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="awards">
-                    <ul>
-                        <li><span>Presidential Volunteer Service Award (PVSA)</span><br>2025, 2020-2022</li>
-                        <li><span>Sigma Xi Associate Membership</span><br>2022-</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="certs">
-                    <ul>
-                        <li><span>CITI Program</span><br>Expires 2028: Conflicts of Interest
-                                                     <br>Expires 2027: HSP, 
-                                                                        Good Clinical Practice, 
-                                                                        Data or Specimens Only Research, 
-                                                                        Lifespan IRB Membership
-                                                     <br>Expires 2026: HIPAA Annual Renewal</li>
-                        <li><span>Coursera</span><br>Mar 2024: Generative AI: Impact, Considerations, and Ethical Issues (IBM)</li>
-                        <li><span>Biostatistics - Catalyst Medical Consulting</span><br>Jun 2023: Advanced Catalyst Workshop</li>
-                    </ul>
-                </div>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Toolbox</p>
+            <p class="tab-links" onclick="opentab('interests')">Interests</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
+            <p class="tab-links" onclick="opentab('awards')">Awards</p>
+            <p class="tab-links" onclick="opentab('certs')">Certifications</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Python AI/ML</span><br>PyTorch (+ Lightning, Geometric), Scikit-learn, Tensorflow, HuggingFace (Transformers, Datasets)</li>
+              <li><span>Data Wrangling & Visualization</span><br>SQL, NumPy, Unix, Matplotlib, Seaborn, spaCy, Julia</li>
+              <li><span>Biostatistics</span><br>Stata, SPSS, R</li>
+              <li><span>Cheminformatics</span><br>RDKit, Biopandas</li>
+              <li><span>Developer Tools</span><br>GitHub, VS Code, WandB, Docker, Jupyter Notebook</li>
+              <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+              <li><span>Medical Ontologies</span><br>ICD, OMOP, SNOMED, UMLS</li>
+              <li><span>Languages</span><br>English, Spanish, Gujarati</li>
+              <li><span>Miscellaneous</span><br>Vocal Music (A Cappella & Hindustani Classical), Beatboxing, Photography</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="interests">
+            <ul>
+              <li><span>Multimodal Learning</span><br>Integration of image, video, and sequence data for prediction/inference</li>
+              <li><span>Self-Supervised Learning</span><br>MoCo, world models, clinical foundation models, latent space prediction</li>
+              <li><span>Real-Time Data Streams</span><br>Streaming inference from continuous physiological waveform & video data</li>
+              <li><span>Graph Representations</span><br>Knowledge Graphs, Graph Neural Networks</li>
+              <li><span>Natural Language Processing</span><br>Text mining, information extraction, and knowledge discovery</li>
+              <li><span>Learning Health Systems</span><br>Data for one patient informs care of the next, Charles Friedman</li>
+              <li><span>Patient Care</span><br>Building longitudinal relationships through vulnerability, narrative medicine</li>
+              <li><span>In-Silico Drug Design</span><br>AI for drug discovery, repurposing, and development</li>
+              <li><span>Innovation</span><br>SaMD, Wearables for public health & preventative care</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Brown University</span><br>Artificial Intelligence in Health Informatics, ScB.<br>2023-2027</li>
+              <li><span>Abington Heights High School</span><br>2019-2023</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="coursework">
+            <ul>
+              <li><span>Deep Learning, SSL, NLP</span><br>MAE, MoCo, ViTs, MLPs, CNNs, RNNs (LSTM/GRU), Transformers, REINFORCE, Diffusion </li>
+              <li><span>Computational Biology</span><br>MCMC, Haplotype phasing, HMMs, AlphaFold, LD, GWAS</li>
+              <li><span>Health Informatics</span><br>JuliaLang, OMOP CDM, HL7 FHIR, Evaluation Methods, Sociotechnical systems</li>
+              <li><span>Physiology (w/ Lab)</span><br>Circulatory, Renal, GI, Somatic Motor,Pathophysiology</li>
+              <li><span>Biochemistry</span><br>Metabolic Pathways, Regulation, Protein Structure, Visualization</li>
+              <li><span>Chemistry (w/ Lab)</span><br>Organic Chemistry (I & II), Inorganic Chemistry, Lab Techniques (NMR, GC-MS, TLC)</li>
+              <li><span>Mathematics</span><br>Calculus-Based Statistics, Linear Algebra, Biostatistics, Decision Theory, Mechanics</li>
+              <li><span>Computational Theory</span><br>Discrete Math, Data Structures & Algorithms, Time Complexity</li>
+              <li><span>Humanities</span><br>Medical Anthropology, Creative Nonfiction, Academic Essay-Writing</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="awards">
+            <ul>
+              <li><span>Presidential Volunteer Service Award (PVSA)</span><br>2025, 2020-2022</li>
+              <li><span>Sigma Xi Associate Membership</span><br>2022-</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="certs">
+            <ul>
+              <li><span>CITI Program</span><br>Expires 2028: Conflicts of Interest
+                                             <br>Expires 2027: HSP,
+                                                                Good Clinical Practice,
+                                                                Data or Specimens Only Research,
+                                                                Lifespan IRB Membership
+                                             <br>Expires 2026: HIPAA Annual Renewal</li>
+              <li><span>Coursera</span><br>Mar 2024: Generative AI: Impact, Considerations, and Ethical Issues (IBM)</li>
+              <li><span>Biostatistics - Catalyst Medical Consulting</span><br>Jun 2023: Advanced Catalyst Workshop</li>
+            </ul>
+          </div>
+
+          <div class="about-accs">
+            <div class="acc">
+              <button class="acc__head">
+                <span>Toolbox</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>Python AI/ML</span><br>PyTorch (+ Lightning, Geometric), Scikit-learn, Tensorflow, HuggingFace (Transformers, Datasets)</li>
+                  <li><span>Data Wrangling & Visualization</span><br>SQL, NumPy, Unix, Matplotlib, Seaborn, spaCy, Julia</li>
+                  <li><span>Biostatistics</span><br>Stata, SPSS, R</li>
+                  <li><span>Cheminformatics</span><br>RDKit, Biopandas</li>
+                  <li><span>Developer Tools</span><br>GitHub, VS Code, WandB, Docker, Jupyter Notebook</li>
+                  <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                  <li><span>Medical Ontologies</span><br>ICD, OMOP, SNOMED, UMLS</li>
+                  <li><span>Languages</span><br>English, Spanish, Gujarati</li>
+                  <li><span>Miscellaneous</span><br>Vocal Music (A Cappella & Hindustani Classical), Beatboxing, Photography</li>
+                </ul>
+              </div></div>
             </div>
+            <div class="acc">
+              <button class="acc__head">
+                <span>Interests</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>Multimodal Learning</span><br>Integration of image, video, and sequence data for prediction/inference</li>
+                  <li><span>Self-Supervised Learning</span><br>MoCo, world models, clinical foundation models, latent space prediction</li>
+                  <li><span>Real-Time Data Streams</span><br>Streaming inference from continuous physiological waveform & video data</li>
+                  <li><span>Graph Representations</span><br>Knowledge Graphs, Graph Neural Networks</li>
+                  <li><span>Natural Language Processing</span><br>Text mining, information extraction, and knowledge discovery</li>
+                  <li><span>Learning Health Systems</span><br>Data for one patient informs care of the next, Charles Friedman</li>
+                  <li><span>Patient Care</span><br>Building longitudinal relationships through vulnerability, narrative medicine</li>
+                  <li><span>In-Silico Drug Design</span><br>AI for drug discovery, repurposing, and development</li>
+                  <li><span>Innovation</span><br>SaMD, Wearables for public health & preventative care</li>
+                </ul>
+              </div></div>
+            </div>
+            <div class="acc">
+              <button class="acc__head">
+                <span>Education</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>Brown University</span><br>Artificial Intelligence in Health Informatics, ScB.<br>2023-2027</li>
+                  <li><span>Abington Heights High School</span><br>2019-2023</li>
+                </ul>
+              </div></div>
+            </div>
+            <div class="acc">
+              <button class="acc__head">
+                <span>Coursework</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>Deep Learning, SSL, NLP</span><br>MAE, MoCo, ViTs, MLPs, CNNs, RNNs (LSTM/GRU), Transformers, REINFORCE, Diffusion </li>
+                  <li><span>Computational Biology</span><br>MCMC, Haplotype phasing, HMMs, AlphaFold, LD, GWAS</li>
+                  <li><span>Health Informatics</span><br>JuliaLang, OMOP CDM, HL7 FHIR, Evaluation Methods, Sociotechnical systems</li>
+                  <li><span>Physiology (w/ Lab)</span><br>Circulatory, Renal, GI, Somatic Motor,Pathophysiology</li>
+                  <li><span>Biochemistry</span><br>Metabolic Pathways, Regulation, Protein Structure, Visualization</li>
+                  <li><span>Chemistry (w/ Lab)</span><br>Organic Chemistry (I & II), Inorganic Chemistry, Lab Techniques (NMR, GC-MS, TLC)</li>
+                  <li><span>Mathematics</span><br>Calculus-Based Statistics, Linear Algebra, Biostatistics, Decision Theory, Mechanics</li>
+                  <li><span>Computational Theory</span><br>Discrete Math, Data Structures & Algorithms, Time Complexity</li>
+                  <li><span>Humanities</span><br>Medical Anthropology, Creative Nonfiction, Academic Essay-Writing</li>
+                </ul>
+              </div></div>
+            </div>
+            <div class="acc">
+              <button class="acc__head">
+                <span>Awards</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>Presidential Volunteer Service Award (PVSA)</span><br>2025, 2020-2022</li>
+                  <li><span>Sigma Xi Associate Membership</span><br>2022-</li>
+                </ul>
+              </div></div>
+            </div>
+            <div class="acc">
+              <button class="acc__head">
+                <span>Certifications</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <ul>
+                  <li><span>CITI Program</span><br>Expires 2028: Conflicts of Interest
+                                                 <br>Expires 2027: HSP,
+                                                                    Good Clinical Practice,
+                                                                    Data or Specimens Only Research,
+                                                                    Lifespan IRB Membership
+                                                 <br>Expires 2026: HIPAA Annual Renewal</li>
+                  <li><span>Coursera</span><br>Mar 2024: Generative AI: Impact, Considerations, and Ethical Issues (IBM)</li>
+                  <li><span>Biostatistics - Catalyst Medical Consulting</span><br>Jun 2023: Advanced Catalyst Workshop</li>
+                </ul>
+              </div></div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About</a>
+        <a href="projects.html">Projects</a><a href="exp.html">Experience</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="social">
+        <a href="mailto:manan_pancholy@brown.edu" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/mspancho" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p class="fineprint">© 2026 Manan S. Pancholy</p>
     </div>
-</div>
-<script>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
-    
+
     function opentab(tabname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
@@ -141,16 +257,5 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-</body>
-</html>
+  </script>
+</body></html>
