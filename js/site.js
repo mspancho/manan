@@ -19,5 +19,23 @@
       if (e.key === "Escape" && overlay.classList.contains("open")) setOpen(false);
     });
   }
-  document.addEventListener("DOMContentLoaded", () => { initMenu(); });
+  function initReveals() {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      }
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .reveal-group").forEach((el) => io.observe(el));
+  }
+  function initAccordions() {
+    document.querySelectorAll(".acc__head").forEach((head) => {
+      head.setAttribute("aria-expanded", "false");
+      head.addEventListener("click", () => {
+        const item = head.closest(".acc");
+        const open = item.classList.toggle("open");
+        head.setAttribute("aria-expanded", String(open));
+      });
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () => { initMenu(); initReveals(); initAccordions(); });
 })();

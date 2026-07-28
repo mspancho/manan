@@ -82,3 +82,38 @@ body.menu-open { overflow: hidden; }
 .site-footer .social a { color: #cfd8ea; font-size: 1.4rem; margin-left: 1rem; }
 .site-footer .social a:hover { color: var(--green); }
 .site-footer .fineprint { width: 100%; font-size: 0.8rem; color: #8b96ad; }
+/* ============ Motion ============ */
+.reveal { opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.reveal-group > * { opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: calc(var(--i, 0) * 80ms); }
+.reveal-group.in > * { opacity: 1; transform: none; }
+/* ============ Accordion ============ */
+.acc { border-bottom: 1px solid var(--line); }
+.acc__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  width: 100%; background: none; border: 0; cursor: pointer; text-align: left;
+  padding: 1.1rem 0; font-family: var(--font-body); color: var(--ink); }
+.acc__head .acc__icon { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--brand-deep); color: var(--brand-deep);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; }
+.acc.open .acc__icon { transform: rotate(45deg); background: var(--brand-deep); color: #fff; }
+.acc__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; }
+.acc.open .acc__body { grid-template-rows: 1fr; }
+.acc__inner { overflow: hidden; }
+.acc__inner > :first-child { margin-top: 0.2rem; }
+.acc__inner > :last-child { margin-bottom: 1.2rem; }
+/* Reduced motion: everything instant */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  /* Covers every animated selector in v2: motion system, chrome (T3),
+     atoms (T2), and page-level hover/idle animations (T6+). */
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .reveal-group > * { opacity: 1; transform: none; }
+}
