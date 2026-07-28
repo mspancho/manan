@@ -174,7 +174,10 @@ body.menu-open { overflow: hidden; }
 }
 /* ============ Projects ============ */
 .proj-note { color: var(--ink-soft); font-weight: 400; margin-top: 0.6rem; max-width: 65ch; }
-.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+/* min() keeps the track from exceeding the container on narrow phones
+   (92vw of a 320px viewport is 294px, below the 320px minimum). */
+.proj-grid { display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 1.5rem; margin-top: 2.4rem; }
 .proj-card { background: #fff; border-radius: 18px; padding: 2rem; border: 1px solid var(--line);
   display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem;
