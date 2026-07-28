@@ -1,0 +1,41 @@
+/* ============ v2 — MHI-inspired redesign ============ */
+/* 1. Tokens */
+:root {
+  --brand: #6a80d5; --brand-deep: #5075bb; --periwinkle: #88a3d8;
+  --green: #c7f2bc; --green-soft: #cbf5d1; --ice: #d1f3f5; --ice-soft: #ddeefe;
+  --accent-name: #1f6fb0; --accent-warm: #b54769; --accent-rust: #be431b;
+  --paper: #fbfdff; --ink: #101321; --ink-soft: #3f4658; --line: #d9e2ef;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Mako", system-ui, sans-serif;
+  --header-h: 72px;
+}
+/* 2. Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--ink); background: var(--paper);
+       line-height: 1.65; font-size: 1.06rem; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+/* 3. Typography */
+h1, h2, .display { font-family: var(--font-display); font-weight: 800;
+                   line-height: 1.05; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; }
+h3 { font-size: 1.35rem; font-weight: 500; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+           color: var(--brand-deep); font-weight: 500; }
+/* 4. Layout primitives */
+.container { width: min(1120px, 92vw); margin-inline: auto; }
+.band { padding-block: clamp(3.5rem, 9vw, 7rem); }
+.band--ice { background: linear-gradient(180deg, var(--ice-soft), var(--ice)); }
+/* 5. Shared atoms */
+.arrow-link { display: inline-flex; align-items: center; gap: 0.5rem;
+              font-weight: 500; text-decoration: none; color: var(--brand-deep); }
+.arrow-link::after { content: "\2192"; transition: transform 0.3s ease; }
+.arrow-link:hover::after { transform: translateX(6px); }
+.chip { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 999px;
+        background: var(--green); color: var(--ink); font-size: 0.78rem; }
+.btn { display: inline-block; padding: 0.85rem 1.8rem; border-radius: 999px;
+       background: var(--brand); color: #fff; text-decoration: none; border: 0;
+       font-size: 1rem; cursor: pointer; transition: background 0.3s ease, transform 0.3s ease; }
+.btn:hover { background: var(--brand-deep); transform: translateY(-2px); }
