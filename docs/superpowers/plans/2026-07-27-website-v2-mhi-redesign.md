@@ -18,6 +18,7 @@
 - **Contact form endpoint unchanged:** the Google Apps Script URL in `faq.html` must be carried over exactly.
 - **Keep Font Awesome Pro.** v2 carries over v1's exact FA Pro 6.7.2 stylesheet links (all ten: `fontawesome`, `solid`, `regular`, `light`, `brands`, `sharp-solid`, `sharp-regular`, `sharp-light`, `duotone`). All v1 icon class names (`fa-light fa-bars`, `fa-solid fa-file-user`, `fa-head-side-brain`, `fa-comments-question`, `fa-users-medical`, `fa-user-music`, `fa-presentation-screen`, `fa-browser`, …) are used unchanged — no icon substitutions anywhere in v2.
 - **All motion must respect `prefers-reduced-motion: reduce`.**
+- **Accessibility labels (user-approved 2026-07-28, applies to every page):** every icon-only link/button carries an `aria-label`, and every purely decorative icon carries `aria-hidden="true"` — including the typewriter cursor. v1 has zero `aria-label`s site-wide; adding them is attribute-only and does not alter any visible text, href, or content, so content preservation still holds.
 - **Fix the viewport meta everywhere:** v1 has `content="width-device-width, initial-scale=1.0"` (typo, invalid). v2 uses `content="width=device-width, initial-scale=1.0"`.
 - **Fix wrong page titles:** `exp.html` and `faq.html` both currently say `<title>Projects</title>`.
 - **Rollback guarantee:** `v1` branch + `v1.0.0` tag are never rebased/deleted; the Hostinger deploy source can be switched between v1 and v2 at any time (runbook in Task 12).
