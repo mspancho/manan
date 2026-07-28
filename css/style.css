@@ -117,3 +117,33 @@ body.menu-open { overflow: hidden; }
   }
   .reveal, .reveal-group > * { opacity: 1; transform: none; }
 }
+/* ============ Home ============ */
+.hero { min-height: 100svh; display: flex; align-items: center;
+  background: url("../images/opt/hero-bg.jpg") center / cover no-repeat; padding-top: var(--header-h); }
+.hero__name { color: var(--accent-name); }
+.typewriter { font-size: 1.3rem; min-height: 2rem; }
+#typewriter-text, .cursor { color: var(--accent-name); }
+.cursor { animation: blink 1s infinite; font-weight: 700; }
+@keyframes blink { 0%,50% {opacity:1} 51%,100% {opacity:0} }
+.social-icons { margin-top: 1.6rem; display: flex; gap: 1.1rem; }
+.social-icons a { font-size: 1.7rem; color: var(--ink); transition: color 0.3s ease, transform 0.3s ease; }
+.social-icons a:hover { color: var(--brand-deep); transform: translateY(-3px); }
+.scroll-cue { display: inline-block; margin-top: 3rem; color: var(--brand-deep);
+  font-size: 1.3rem; animation: cue 1.8s ease-in-out infinite; }
+@keyframes cue { 0%,100% { transform: translateY(0) } 50% { transform: translateY(8px) } }
+.statement { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 700;
+  max-width: 28ch; color: var(--ink); }
+.link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2rem; }
+.link-card { background: #fff; border-radius: 18px; padding: 2rem 1.6rem; text-decoration: none;
+  display: flex; flex-direction: column; gap: 0.7rem; border: 1px solid var(--line);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.link-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgb(80 117 187 / 0.15); }
+.link-card h2 { font-size: 1.6rem; }
+.link-card p { color: var(--ink-soft); font-size: 0.95rem; flex: 1; }
+@media (max-width: 720px) {
+  .hero { background:
+    linear-gradient(135deg, #6a80d5 0%, #88a3d8 22%, #c7f2bc 55%, #d1f3f5 80%, #ddeefe 100%); }
+  .hero__inner { text-align: center; }
+  .social-icons { justify-content: center; }
+}
+.in-view-immediate > * { opacity: 1 !important; transform: none !important; }

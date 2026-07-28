@@ -1,69 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Manan S. Pancholy</title>
-    <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
-</head>
-<body>
-<div id="header-home">
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Mako&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Manan S. Pancholy</title>
+</head><body>
+  <header class="site-header">
     <div class="container">
-        <nav>
-            <img src="images/MSP logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="exp.html">Experience</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-light fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <div class="typewriter">
-                <span class="static-text">Curious about <span id="typewriter-text"></span></span>
-                <span class="cursor">|</span>
-            </div>
-            <div class="typing-container">
-                <h1>Hi, I'm <span>Manan</span>.</h1>
-            </div>
-            <p>
-                <div class="social-icons">
-                    <a href="mailto:manan_pancholy@brown.edu" target="_blank">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/mspancho" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé" target="_blank">
-                        <i class="fa-solid fa-file-user"></i>
-                    </a>
-                </div>
-            </p>
-        </div>
+      <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
+        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-</div>
-
-<script>
+  </header>
+  <nav id="menu-overlay" aria-label="Main menu">
+    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark"></i></button>
+    <div class="container">
+      <a style="--i:0" href="index.html">Home</a>
+      <a style="--i:1" href="about.html">About</a>
+      <a style="--i:2" href="projects.html">Projects</a>
+      <a style="--i:3" href="exp.html">Experience</a>
+      <a style="--i:4" href="faq.html">FAQ</a>
+    </div>
+  </nav>
+  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
+    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  </a>
+  <main>
+    <section class="hero">
+      <div class="container hero__inner reveal-group in-view-immediate">
+        <p class="typewriter" style="--i:0"><span class="static-text">Curious about </span><span id="typewriter-text"></span><span class="cursor">|</span></p>
+        <h1 style="--i:1">Hi, I'm <span class="hero__name">Manan</span>.</h1>
+        <div class="social-icons" style="--i:2">
+          <a href="mailto:manan_pancholy@brown.edu" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/mspancho" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé" target="_blank">
+            <i class="fa-solid fa-file-user"></i>
+          </a>
+        </div>
+        <a class="scroll-cue" style="--i:3" href="#intro" aria-label="Scroll down"><i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+    </section>
+    <section id="intro" class="band">
+      <div class="container">
+        <p class="display statement reveal">I seek to leverage data to its fullest potential
+        to improve human health — whether that means helping patients, physicians,
+        or healthcare systems.</p>
+      </div>
+    </section>
+    <section class="band band--ice">
+      <div class="container">
+        <p class="eyebrow reveal">Explore</p>
+        <div class="link-cards reveal-group">
+          <a class="link-card" style="--i:0" href="about.html"><h2>About</h2><p>Toolbox, interests, education, coursework.</p><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:1" href="projects.html"><h2>Projects</h2><p>ML research, health informatics, and web builds.</p><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:2" href="exp.html"><h2>Experience</h2><p>Employment, service, and clinical work.</p><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:3" href="faq.html"><h2>FAQ</h2><p>Questions, answers, and a way to reach me.</p><span class="arrow-link">Find out more</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About</a>
+        <a href="projects.html">Projects</a><a href="exp.html">Experience</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="social">
+        <a href="mailto:manan_pancholy@brown.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/mspancho" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p class="fineprint">© 2026 Manan S. Pancholy</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>
 const phrases = [
     "multimodal learning.",
     "self-supervised learning.",
@@ -107,7 +139,7 @@ function shuffle(array) {
 
 function typeWriter() {
     const currentPhrase = phrases[currentPhraseIndex];
-    
+
     if (isDeleting) {
         typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
         currentCharIndex--;
@@ -115,9 +147,9 @@ function typeWriter() {
         typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
         currentCharIndex++;
     }
-    
+
     let typeSpeed = isDeleting ? 50 : 100;
-    
+
     if (!isDeleting && currentCharIndex === currentPhrase.length) {
         typeSpeed = 2000; // Pause at end
         isDeleting = true;
@@ -126,7 +158,7 @@ function typeWriter() {
         currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
         typeSpeed = 500; // Pause before next phrase
     }
-    
+
     setTimeout(typeWriter, typeSpeed);
 }
 
@@ -136,15 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
     typeWriter();
 });
 </script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-</body>
-</html>
+</body></html>
