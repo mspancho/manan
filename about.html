@@ -263,5 +263,25 @@
         clicked.tabIndex = 0;
         document.getElementById(tabname).classList.add("active-tab");
     }
+
+    // Standard tablist pattern: Tab enters/leaves the tablist, arrows move within it.
+    (function initTabKeys() {
+        const tablist = document.querySelector('.tab-titles[role="tablist"]');
+        if (!tablist) return;
+        const tabs = Array.from(tablist.querySelectorAll('.tab-links'));
+        tablist.addEventListener("keydown", (e) => {
+            const current = tabs.indexOf(document.activeElement);
+            if (current === -1) return;
+            let next;
+            if (e.key === "ArrowRight") next = (current + 1) % tabs.length;
+            else if (e.key === "ArrowLeft") next = (current - 1 + tabs.length) % tabs.length;
+            else if (e.key === "Home") next = 0;
+            else if (e.key === "End") next = tabs.length - 1;
+            else return;
+            e.preventDefault();
+            tabs[next].focus();
+            tabs[next].click();
+        });
+    })();
   </script>
 </body></html>
