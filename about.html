@@ -50,15 +50,15 @@
                     I seek to leverage data to its fullest potential to improve human health, whether that means
                     helping patients, physicians, or healthcare systems.</p>
 
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Toolbox</p>
-            <p class="tab-links" onclick="opentab('interests')">Interests</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-            <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
-            <p class="tab-links" onclick="opentab('awards')">Awards</p>
-            <p class="tab-links" onclick="opentab('certs')">Certifications</p>
+          <div class="tab-titles" role="tablist" aria-label="About sections">
+            <button type="button" class="tab-links active-link" role="tab" id="tab-skills" aria-controls="skills" aria-selected="true" tabindex="0" onclick="opentab('skills', this)">Toolbox</button>
+            <button type="button" class="tab-links" role="tab" id="tab-interests" aria-controls="interests" aria-selected="false" tabindex="-1" onclick="opentab('interests', this)">Interests</button>
+            <button type="button" class="tab-links" role="tab" id="tab-education" aria-controls="education" aria-selected="false" tabindex="-1" onclick="opentab('education', this)">Education</button>
+            <button type="button" class="tab-links" role="tab" id="tab-coursework" aria-controls="coursework" aria-selected="false" tabindex="-1" onclick="opentab('coursework', this)">Coursework</button>
+            <button type="button" class="tab-links" role="tab" id="tab-awards" aria-controls="awards" aria-selected="false" tabindex="-1" onclick="opentab('awards', this)">Awards</button>
+            <button type="button" class="tab-links" role="tab" id="tab-certs" aria-controls="certs" aria-selected="false" tabindex="-1" onclick="opentab('certs', this)">Certifications</button>
           </div>
-          <div class="tab-contents active-tab" id="skills">
+          <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0">
             <ul>
               <li><span>Python AI/ML</span><br>PyTorch (+ Lightning, Geometric), Scikit-learn, Tensorflow, HuggingFace (Transformers, Datasets)</li>
               <li><span>Data Wrangling & Visualization</span><br>SQL, NumPy, Unix, Matplotlib, Seaborn, spaCy, Julia</li>
@@ -71,7 +71,7 @@
               <li><span>Miscellaneous</span><br>Vocal Music (A Cappella & Hindustani Classical), Beatboxing, Photography</li>
             </ul>
           </div>
-          <div class="tab-contents" id="interests">
+          <div class="tab-contents" id="interests" role="tabpanel" aria-labelledby="tab-interests" tabindex="0">
             <ul>
               <li><span>Multimodal Learning</span><br>Integration of image, video, and sequence data for prediction/inference</li>
               <li><span>Self-Supervised Learning</span><br>MoCo, world models, clinical foundation models, latent space prediction</li>
@@ -84,13 +84,13 @@
               <li><span>Innovation</span><br>SaMD, Wearables for public health & preventative care</li>
             </ul>
           </div>
-          <div class="tab-contents" id="education">
+          <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
             <ul>
               <li><span>Brown University</span><br>Artificial Intelligence in Health Informatics, ScB.<br>2023-2027</li>
               <li><span>Abington Heights High School</span><br>2019-2023</li>
             </ul>
           </div>
-          <div class="tab-contents" id="coursework">
+          <div class="tab-contents" id="coursework" role="tabpanel" aria-labelledby="tab-coursework" tabindex="0">
             <ul>
               <li><span>Deep Learning, SSL, NLP</span><br>MAE, MoCo, ViTs, MLPs, CNNs, RNNs (LSTM/GRU), Transformers, REINFORCE, Diffusion </li>
               <li><span>Computational Biology</span><br>MCMC, Haplotype phasing, HMMs, AlphaFold, LD, GWAS</li>
@@ -103,13 +103,13 @@
               <li><span>Humanities</span><br>Medical Anthropology, Creative Nonfiction, Academic Essay-Writing</li>
             </ul>
           </div>
-          <div class="tab-contents" id="awards">
+          <div class="tab-contents" id="awards" role="tabpanel" aria-labelledby="tab-awards" tabindex="0">
             <ul>
               <li><span>Presidential Volunteer Service Award (PVSA)</span><br>2025, 2020-2022</li>
               <li><span>Sigma Xi Associate Membership</span><br>2022-</li>
             </ul>
           </div>
-          <div class="tab-contents" id="certs">
+          <div class="tab-contents" id="certs" role="tabpanel" aria-labelledby="tab-certs" tabindex="0">
             <ul>
               <li><span>CITI Program</span><br>Expires 2028: Conflicts of Interest
                                              <br>Expires 2027: HSP,
@@ -247,14 +247,20 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
+    function opentab(tabname, el) {
+        const clicked = el || (typeof event !== "undefined" && event.currentTarget);
+        if (!clicked) return;
+        for (const tablink of tablinks) {
             tablink.classList.remove("active-link");
+            tablink.setAttribute("aria-selected", "false");
+            tablink.tabIndex = -1;
         }
-        for(tabcontent of tabcontents){
+        for (const tabcontent of tabcontents) {
             tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classList.add("active-link");
+        clicked.classList.add("active-link");
+        clicked.setAttribute("aria-selected", "true");
+        clicked.tabIndex = 0;
         document.getElementById(tabname).classList.add("active-tab");
     }
   </script>
