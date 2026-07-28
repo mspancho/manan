@@ -210,7 +210,10 @@ body.menu-open { overflow: hidden; }
 .contact-form input, .contact-form textarea { font-family: var(--font-body); font-size: 1rem;
   color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 10px;
   padding: 0.9rem 1rem; resize: vertical; }
+/* Focus ring uses --brand-deep, not --ice: a light-cyan outline on a white
+   input over the ice-tinted band is too low-contrast for keyboard users. */
 .contact-form input:focus, .contact-form textarea:focus {
-  outline: 2px solid var(--ice); border-color: var(--brand); }
+  outline: 2px solid var(--brand-deep); outline-offset: 2px;
+  border-color: var(--brand); }
 .contact-form .btn { align-self: flex-start; }
 #msg { display: block; margin-top: 1rem; color: var(--brand-deep); font-weight: 500; }
