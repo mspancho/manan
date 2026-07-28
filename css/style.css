@@ -5,7 +5,9 @@
   --green: #c7f2bc; --green-soft: #cbf5d1; --ice: #d1f3f5; --ice-soft: #ddeefe;
   --accent-name: #1f6fb0; --accent-warm: #b54769; --accent-rust: #be431b;
   --paper: #fbfdff; --ink: #101321; --ink-soft: #3f4658; --line: #d9e2ef;
-  --font-display: "Fraunces", Georgia, serif;
+  /* v1 used Mako for everything; both tokens point at it so the whole site
+     matches the original typeface. */
+  --font-display: "Mako", system-ui, sans-serif;
   --font-body: "Mako", system-ui, sans-serif;
   --header-h: 72px;
 }
@@ -17,11 +19,13 @@ body { font-family: var(--font-body); color: var(--ink); background: var(--paper
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 /* 3. Typography */
-h1, h2, .display { font-family: var(--font-display); font-weight: 800;
-                   line-height: 1.05; letter-spacing: -0.02em; }
+/* Mako (v1's font) ships one 400 weight — asking for 700/800 yields a synthetic
+   faux-bold, so hierarchy comes from size and spacing instead, as it did in v1. */
+h1, h2, .display { font-family: var(--font-display); font-weight: 400;
+                   line-height: 1.1; letter-spacing: -0.01em; }
 h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
-h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; }
-h3 { font-size: 1.35rem; font-weight: 500; }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h3 { font-size: 1.35rem; font-weight: 400; }
 /* v1 heritage class kept on page titles across projects/exp/faq. */
 .sub-title { margin-bottom: 0.6rem; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
@@ -67,7 +71,7 @@ body.at-top .site-header { background: transparent; backdrop-filter: none;
   opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; }
 #menu-overlay.open { opacity: 1; visibility: visible; }
 #menu-overlay .container { display: flex; flex-direction: column; gap: 0.5rem; }
-#menu-overlay a { font-family: var(--font-display); font-weight: 700; color: #fff;
+#menu-overlay a { font-family: var(--font-display); font-weight: 400; color: #fff;
   text-decoration: none; font-size: clamp(2rem, 6vw, 3.6rem); line-height: 1.25;
   display: inline-flex; align-items: center; gap: 1rem;
   opacity: 0; transform: translateY(18px); transition: opacity 0.45s ease, transform 0.45s ease;
@@ -144,7 +148,7 @@ body.menu-open { overflow: hidden; }
 .scroll-cue { display: inline-block; margin-top: 3rem; color: var(--brand-deep);
   font-size: 1.3rem; animation: cue 1.8s ease-in-out infinite; }
 @keyframes cue { 0%,100% { transform: translateY(0) } 50% { transform: translateY(8px) } }
-.statement { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 700;
+.statement { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 400;
   max-width: 28ch; color: var(--ink); }
 .link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2rem; }
 .link-card { background: #fff; border-radius: 18px; padding: 2rem 1.6rem; text-decoration: none;
@@ -211,7 +215,8 @@ body.menu-open { overflow: hidden; }
 .exp-meta { display: block; font-size: 0.9rem; color: var(--ink-soft); font-weight: 400; }
 .acc-list { margin-top: 1.5rem; }
 .acc__inner ul { padding-left: 1.2rem; margin-block: 0.6rem; }
-.acc__inner h4 { font-family: var(--font-display); font-weight: 700; margin-top: 1.4rem; }
+.acc__inner h4 { font-family: var(--font-display); font-weight: 400; margin-top: 1.4rem;
+  color: var(--brand-deep); }
 .acc__inner p { margin-block: 0.6rem; }
 .acc__inner .arrow-link { margin-top: 0.8rem; }
 /* ============ FAQ ============ */
