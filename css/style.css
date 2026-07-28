@@ -27,6 +27,11 @@ h3 { font-size: 1.35rem; font-weight: 500; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
            color: var(--brand-deep); font-weight: 500; }
 /* 4. Layout primitives */
+/* The fixed header reserves no space, so every page's first band must clear it.
+   .hero opts out — it deliberately runs full-bleed under the transparent bar. */
+main { padding-top: var(--header-h); }
+.hero { margin-top: calc(-1 * var(--header-h)); }
+html { scroll-padding-top: var(--header-h); }
 .container { width: min(1120px, 92vw); margin-inline: auto; }
 .band { padding-block: clamp(3.5rem, 9vw, 7rem); }
 .band--ice { background: linear-gradient(180deg, var(--ice-soft), var(--ice)); }
@@ -45,7 +50,12 @@ h3 { font-size: 1.35rem; font-weight: 500; }
 .site-header { position: fixed; inset: 0 0 auto 0; height: var(--header-h); z-index: 40;
   display: flex; align-items: center;
   background: color-mix(in srgb, var(--paper) 82%, transparent);
-  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease, border-color 0.3s ease; }
+/* Over the homepage hero the bar reads as a pale stripe across the artwork.
+   Sit transparent on the image, then fade the surface in once scrolled. */
+body.at-top .site-header { background: transparent; backdrop-filter: none;
+  border-bottom-color: transparent; }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; }
 .site-header .logo { width: 56px; height: 40px; }
 .menu-btn { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem;
@@ -90,7 +100,8 @@ body.menu-open { overflow: hidden; }
 .reveal.in { opacity: 1; transform: none; }
 .reveal-group > * { opacity: 0; transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  transition-delay: calc(var(--i, 0) * 80ms); }
+  /* Indices run past 5 on long grids; cap the wait so late items don't lag. */
+  transition-delay: min(calc(var(--i, 0) * 80ms), 480ms); }
 .reveal-group.in > * { opacity: 1; transform: none; }
 /* ============ Accordion ============ */
 .acc { border-bottom: 1px solid var(--line); }

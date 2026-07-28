@@ -6,7 +6,7 @@
     const overlay = document.getElementById("menu-overlay");
     const openBtn = document.querySelector(".menu-btn");
     const closeBtn = overlay && overlay.querySelector(".close-btn");
-    if (!overlay || !openBtn) return;
+    if (!overlay || !openBtn || !closeBtn) return;
     const setOpen = (open) => {
       overlay.classList.toggle("open", open);
       document.body.classList.toggle("menu-open", open);
@@ -37,5 +37,19 @@
       });
     });
   }
-  document.addEventListener("DOMContentLoaded", () => { initMenu(); initReveals(); initAccordions(); });
+  /* Only the homepage hero sits under a transparent header. */
+  function initHeaderScroll() {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+    const sync = () => document.body.classList.toggle("at-top", window.scrollY < 40);
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+  }
+  /* Reveals are fail-closed (content starts at opacity 0), so a throw in any
+     one init must not prevent the others from running. */
+  document.addEventListener("DOMContentLoaded", () => {
+    for (const init of [initMenu, initHeaderScroll, initReveals, initAccordions]) {
+      try { init(); } catch (err) { console.error(init.name, err); }
+    }
+  });
 })();

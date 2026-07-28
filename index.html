@@ -26,7 +26,7 @@
     </div>
   </header>
   <nav id="menu-overlay" aria-label="Main menu">
-    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark"></i></button>
+    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
     <div class="container">
       <a style="--i:0" href="index.html">Home</a>
       <a style="--i:1" href="about.html">About</a>
@@ -57,7 +57,7 @@
             <i class="fa-solid fa-file-user" aria-hidden="true"></i>
           </a>
         </div>
-        <a class="scroll-cue" style="--i:3" href="#intro" aria-label="Scroll down"><i class="fa-solid fa-arrow-down"></i></a>
+        <a class="scroll-cue" style="--i:3" href="#intro" aria-label="Scroll down"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
       </div>
     </section>
     <section id="intro" class="band">
@@ -165,6 +165,11 @@ function typeWriter() {
 // Start the animation when page loads
 document.addEventListener('DOMContentLoaded', () => {
     shuffle(phrases);
+    // Respect prefers-reduced-motion: show one phrase instead of animating.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typewriterElement.textContent = phrases[0];
+        return;
+    }
     typeWriter();
 });
 </script>
