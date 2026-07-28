@@ -384,8 +384,13 @@ git commit -m "feat(v2): sticky header, full-screen overlay menu, footer, floati
 /* Reduced motion: everything instant */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal-group > *, #menu-overlay, #menu-overlay a,
-  .acc__body, .acc__icon { transition: none !important; }
+  /* Covers every animated selector in v2: motion system, chrome (T3),
+     atoms (T2), and page-level hover/idle animations (T6+). */
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
   .reveal, .reveal-group > * { opacity: 1; transform: none; }
 }
 ```
