@@ -1,230 +1,263 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
-</head>
-<body>
-<div id="header-about">
-    <!-- Placeholder for background -->
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Mako&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/brands.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-solid.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-regular.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/sharp-light.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/duotone.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Projects</title>
+</head><body>
+  <header class="site-header">
     <div class="container">
-        <nav>
-            <img src="images/MSP logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="exp.html">Experience</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <i class="fa-light fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-light fa-bars" onclick="openmenu()"></i>
-        </nav>
+      <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
+        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-</div>
-
-
-
-<!-- -------projects------------- -->
-<div id="projects">
+  </header>
+  <nav id="menu-overlay" aria-label="Main menu">
+    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark"></i></button>
     <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <h3>If you are a prospective employer and would like to see a repository not linked here, 
+      <a style="--i:0" href="index.html">Home</a>
+      <a style="--i:1" href="about.html">About</a>
+      <a style="--i:2" href="projects.html">Projects</a>
+      <a style="--i:3" href="exp.html">Experience</a>
+      <a style="--i:4" href="faq.html">FAQ</a>
+    </div>
+  </nav>
+  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
+    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  </a>
+  <main>
+    <section class="band">
+      <div class="container">
+        <h1 class="sub-title reveal">My Projects</h1>
+        <h3 class="proj-note reveal">If you are a prospective employer and would like to see a repository not linked here,
             please contact me at manan_pancholy@brown.edu</h3>
-        <div class="projects-list">
-            <div>
-                <i class="fa-solid fa-x-ray"></i>
-                <h2>PaCX-MAE</h2>
-                <p>
-                    Contributed to a cross-modal self-supervised learning framework that distills
-                    physiological signals (ECG and lab data) into a unimodal chest X-ray encoder.<br>
-                    <br>
-
-                    Experimented with distillation and led dataset preprocessing & evaluation on 
-                    clinical benchmarks (MedMod + CheXchoNet), including systematic component studies 
-                    (low-data efficiency and ablations) to isolate model behavior.<br>
-                    <br>
-
-                    Accepted as a poster presentation at the 43rd International Conference on Machine Learning (ICML)
-                    3rd Annual Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences (FM4LS).<br>
-                    <br>
-
-                    <span>Tools: </span>PyTorch, PyTorch Lightning, WandB, DDP, Slurm, LoRA, Scikit-learn
-                </p>
-                <a href="https://arxiv.org/abs/2606.01537" target="_blank">Learn More</a>
+        <div class="proj-grid reveal-group">
+          <article class="proj-card" style="--i:0">
+            <i class="fa-solid fa-x-ray proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>PaCX-MAE</h2>
+            <p class="proj-card__lede">Contributed to a cross-modal self-supervised learning framework that distills
+                    physiological signals (ECG and lab data) into a unimodal chest X-ray encoder.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Experimented with distillation and led dataset preprocessing & evaluation on
+                    clinical benchmarks (MedMod + CheXchoNet), including systematic component studies
+                    (low-data efficiency and ablations) to isolate model behavior.</p>
+                <p>Accepted as a poster presentation at the 43rd International Conference on Machine Learning (ICML)
+                    3rd Annual Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences (FM4LS).</p>
+                <p><span>Tools: </span>PyTorch, PyTorch Lightning, WandB, DDP, Slurm, LoRA, Scikit-learn</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-hexagon-nodes"></i>
-                <h2>GraphiStasis</h2>
-                <p>
-                    Used MLP and GNNs (SAGE, GCN, GAT) to predict epistatic
-                    interactions using a bipartite gene-disease graph.<br>
-                    <br>
-
-                    Tested the models' viability on a set of 108 schizophrenia 
+            <a class="arrow-link" href="https://arxiv.org/abs/2606.01537" target="_blank">Learn more</a>
+          </article>
+          <article class="proj-card" style="--i:1">
+            <i class="fa-solid fa-hexagon-nodes proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>GraphiStasis</h2>
+            <p class="proj-card__lede">Used MLP and GNNs (SAGE, GCN, GAT) to predict epistatic
+                interactions using a bipartite gene-disease graph.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Tested the models' viability on a set of 108 schizophrenia
                     genes identified by a 2014 GWAS and evaluated embedding space
-                    validity using PCA.<br>
-                    <br>
-                    Currently exploring follow-up analyses and different gene embeddings.<br>
-                    <br>
-                    <span>Tools: </span>PyTorch Geometric, PyTorch, Biopython Entrez, Scikit-learn, Matplotlib
-                </p>
-                <a href="https://github.com/mspancho/graphistasis" target="_blank">Learn More</a>
+                    validity using PCA.</p>
+                <p>Currently exploring follow-up analyses and different gene embeddings.</p>
+                <p><span>Tools: </span>PyTorch Geometric, PyTorch, Biopython Entrez, Scikit-learn, Matplotlib</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-head-side-brain"></i>
-                <h2>ML Analysis of Mental Health</h2>
-                <p>
-                    Explaining machine learning models to understand lifestyle 
-                    and social determinants of mental health using a dataset
-                    of over 200,000 Americans from the NIH's All Of Us program.<br>
-                    <br>
-
-                    Accepted as a podium abstract at the 2026 Annual Meeting of the American Medical Informatics Association.<br>
-                    <br>
-
-                    <span>Tools: </span>Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib
-                </p>
+            <a class="arrow-link" href="https://github.com/mspancho/graphistasis" target="_blank">Learn more</a>
+          </article>
+          <article class="proj-card" style="--i:2">
+            <i class="fa-solid fa-head-side-brain proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>ML Analysis of Mental Health</h2>
+            <p class="proj-card__lede">Explaining machine learning models to understand lifestyle
+                and social determinants of mental health using a dataset
+                of over 200,000 Americans from the NIH's All Of Us program.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Accepted as a podium abstract at the 2026 Annual Meeting of the American Medical Informatics Association.</p>
+                <p><span>Tools: </span>Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-cloud-showers-heavy"></i>
-                <h2>Barsite</h2>
-                <p>
-                    Built multi-page responsive website for Brown Barsaat, Brown's premier South Asian 
-                    a cappella group.<br>
-                    <br>
-
-                    The site features a photo gallery, video banner, and member profiles.<br>
-                    <br>
-
-                    <span>Tools: </span>HTML, CSS, JavaScript, Lightroom
-                </p>
-                <a href="https://github.com/mspancho/barsite" target="_blank">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:3">
+            <i class="fa-solid fa-cloud-showers-heavy proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Web</span>
+            <h2>Barsite</h2>
+            <p class="proj-card__lede">Built multi-page responsive website for Brown Barsaat, Brown's premier South Asian
+                a cappella group.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>The site features a photo gallery, video banner, and member profiles.</p>
+                <p><span>Tools: </span>HTML, CSS, JavaScript, Lightroom</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
-                <h2>cel-IS-ac</h2>
-                <p>
-                    Using a hybrid diffusion model to generate small-molecule
-                    drug candidates for celiac disease. Inspired by family history.<br>
-                    <br>
-                    celISac = celiac + IS (in silico)<br>
-                    <br>
-                    <span>Tools: </span>RDKit, Biopandas, PyTorch Lightning, WandB, PyTorch
-                </p>
-                <!-- <a href="https://github.com/mspancho/celISac" target="_blank">Learn More</a> -->
+            <a class="arrow-link" href="https://github.com/mspancho/barsite" target="_blank">Learn more</a>
+          </article>
+          <article class="proj-card" style="--i:4">
+            <i class="fa-solid fa-wheat-awn-circle-exclamation proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>cel-IS-ac</h2>
+            <p class="proj-card__lede">Using a hybrid diffusion model to generate small-molecule
+                drug candidates for celiac disease. Inspired by family history.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>celISac = celiac + IS (in silico)</p>
+                <p><span>Tools: </span>RDKit, Biopandas, PyTorch Lightning, WandB, PyTorch</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-heart-circle-exclamation"></i>
-                <h2>IE Risk Modeling</h2>
-                <p> 
-                    Developed and compared predictive models (XG Boost, Random Forest, Logistic Regression) for infective endocarditis
-                    prediction from triage data using the MIMIC-IV dataset.<br>
-                    <br> 
-                    Systematically explored hyperparameter tuning and chief complaint 
-                    encoding strategies. Performed internal (MIMIC-IV) and external (MC-MED) validation.<br>
-                    <br>
-                    Identified key risk factors and evaluated model performance using AUPRC and decision curve analysis.<br>
-                    <br>
-                    <span>Tools: </span>Scikit-learn, Slurm, Bash, XGBoost, DataFrames, Matplotlib
-                </p>
-                <a href="https://github.com/mspancho/ie-triage">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:5">
+            <i class="fa-solid fa-heart-circle-exclamation proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>IE Risk Modeling</h2>
+            <p class="proj-card__lede">Developed and compared predictive models (XG Boost, Random Forest, Logistic Regression) for infective endocarditis
+                    prediction from triage data using the MIMIC-IV dataset.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Systematically explored hyperparameter tuning and chief complaint
+                    encoding strategies. Performed internal (MIMIC-IV) and external (MC-MED) validation.</p>
+                <p>Identified key risk factors and evaluated model performance using AUPRC and decision curve analysis.</p>
+                <p><span>Tools: </span>Scikit-learn, Slurm, Bash, XGBoost, DataFrames, Matplotlib</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-heart-pulse"></i>
-                <h2>AFib Risk Modeling</h2>
-                <p> 
-                    Developed and compared 2 predictive models (XG Boost and GLM) for atrial fibrillation diagnosis
-                    using the Synthea Adult Rhode Island dataset.<br>
-                    <br>
-                    Identified key risk factors and evaluated model performance using ROC-AUC and confusion matrix.<br>
-                    <br>
-                    <span>Tools: </span>Julia, XGBoost, GLM, DataFrames, Plots
-                </p>
+            <a class="arrow-link" href="https://github.com/mspancho/ie-triage">Learn more</a>
+          </article>
+          <article class="proj-card" style="--i:0">
+            <i class="fa-solid fa-heart-pulse proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>AFib Risk Modeling</h2>
+            <p class="proj-card__lede">Developed and compared 2 predictive models (XG Boost and GLM) for atrial fibrillation diagnosis
+                using the Synthea Adult Rhode Island dataset.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Identified key risk factors and evaluated model performance using ROC-AUC and confusion matrix.</p>
+                <p><span>Tools: </span>Julia, XGBoost, GLM, DataFrames, Plots</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-notes-medical"></i>
-                <h2>AI Notewriting</h2>
-                <p>
-                    Co-developed a pipeline for generating clinical notes in SOAP format from synthetic
-                    patient encounter audio files and neurology case report text.<br>
-                    <br>
-
-                    Used LoRA for fine-tuning LLaMA-3.1 on synthetic clinical data.<br>
-                    <br>
-
-                    Research conducted under the Shu Lab at Rhode Island Hospital.<br>
-                    <br>
-
-                    <span>Tools: </span>HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)
-                </p>
+          </article>
+          <article class="proj-card" style="--i:1">
+            <i class="fa-solid fa-notes-medical proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Research</span>
+            <h2>AI Notewriting</h2>
+            <p class="proj-card__lede">Co-developed a pipeline for generating clinical notes in SOAP format from synthetic
+                patient encounter audio files and neurology case report text.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Used LoRA for fine-tuning LLaMA-3.1 on synthetic clinical data.</p>
+                <p>Research conducted under the Shu Lab at Rhode Island Hospital.</p>
+                <p><span>Tools: </span>HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-presentation-screen"></i>
-                <h2>ACC Lecture</h2>
-                <p>
-                    Co-delivered lecture on the ethics of ambient AI scribes to
-                    the American College of Cardiology Medical Professional Liability
-                    Insurance Work Group.<br>
-
-                    <br>
-                    Conducted comprehensive scoping review of implementation and ethics of
+          </article>
+          <article class="proj-card" style="--i:2">
+            <i class="fa-solid fa-presentation-screen proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Teaching</span>
+            <h2>ACC Lecture</h2>
+            <p class="proj-card__lede">Co-delivered lecture on the ethics of ambient AI scribes to
+                the American College of Cardiology Medical Professional Liability
+                Insurance Work Group.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Conducted comprehensive scoping review of implementation and ethics of
                     ambient AI scribes and adjacent HIT prior to co-lecturing on findings
-                    with Dr. David Dudzinski, MD JD.<br>
-
-                    <br>
-                    <span>Tools: </span>Microsoft PowerPoint, PubMed, Google Scholar, Justia
-                </p>
+                    with Dr. David Dudzinski, MD JD.</p>
+                <p><span>Tools: </span>Microsoft PowerPoint, PubMed, Google Scholar, Justia</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-brands fa-researchgate"></i>
-                <h2>ResearchGate Profile</h2>
-                <p>Showcasing my research publications and contributions.</p>
-                <a href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:3">
+            <i class="fa-brands fa-researchgate proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Profile</span>
+            <h2>ResearchGate Profile</h2>
+            <p class="proj-card__lede">Showcasing my research publications and contributions.</p>
+            <a class="arrow-link" href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Learn more</a>
+          </article>
+          <article class="proj-card" style="--i:4">
+            <i class="fa-solid fa-browser proj-card__icon" aria-hidden="true"></i>
+            <span class="chip">Web</span>
+            <h2>Personal Website</h2>
+            <p class="proj-card__lede">Built multi-page responsive website (the one you're on right now).</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>This site showcases my projects, experience, and interests.</p>
+                <p><span>Tools: </span>HTML, CSS, JavaScript, Photoshop</p>
+              </div></div>
             </div>
-            <div>
-                <i class="fa-solid fa-browser"></i>
-                <h2>Personal Website</h2>
-                <p>
-                    Built multi-page responsive website (the one you're on right now).<br>
-                    <br>
-                
-                    This site showcases my projects, experience, and interests.<br>
-                    <br>
-
-                    <span>Tools: </span>HTML, CSS, JavaScript, Photoshop
-                </p>
-                <a href="https://github.com/mspancho/manan" target="_blank">Learn More</a>
-            </div>
+            <a class="arrow-link" href="https://github.com/mspancho/manan" target="_blank">Learn more</a>
+          </article>
         </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About</a>
+        <a href="projects.html">Projects</a><a href="exp.html">Experience</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="social">
+        <a href="mailto:manan_pancholy@brown.edu" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/mananpancholy3719" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/mspancho" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p class="fineprint">© 2026 Manan S. Pancholy</p>
     </div>
-</div>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
-</body>
-</html>
+  </footer>
+  <script src="js/site.js"></script>
+</body></html>

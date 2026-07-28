@@ -172,3 +172,20 @@ body.menu-open { overflow: hidden; }
   .tab-titles, .tab-contents { display: none; }
   .about-accs { display: block; }
 }
+/* ============ Projects ============ */
+.proj-note { color: var(--ink-soft); font-weight: 400; margin-top: 0.6rem; max-width: 65ch; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem; margin-top: 2.4rem; }
+.proj-card { background: #fff; border-radius: 18px; padding: 2rem; border: 1px solid var(--line);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.proj-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgb(80 117 187 / 0.15); }
+.proj-card__icon { font-size: 2.1rem; color: var(--brand-deep); margin-bottom: 0.8rem; }
+.proj-card .chip { margin-bottom: 0.6rem; }
+.proj-card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.proj-card__lede { color: var(--ink-soft); }
+.proj-card .acc { border-bottom: none; width: 100%; }
+.proj-card .acc__inner p { color: var(--ink-soft); margin-bottom: 0.9rem; }
+.proj-card .acc__inner p:last-child { margin-bottom: 0; }
+.proj-card p span { color: var(--accent-rust); font-weight: 500; }
+.proj-card .arrow-link { margin-top: 0.8rem; }
