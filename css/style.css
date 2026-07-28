@@ -192,3 +192,12 @@ body.menu-open { overflow: hidden; }
 .proj-card .acc__inner p:last-child { margin-bottom: 0; }
 .proj-card p span { color: var(--accent-rust); font-weight: 500; }
 .proj-card .arrow-link { margin-top: 0.8rem; }
+/* ============ Experience ============ */
+.exp-head-line { display: flex; align-items: center; gap: 1rem; }
+.exp-head-line > i { font-size: 1.5rem; color: var(--brand-deep); width: 2rem; flex: none; text-align: center; }
+.exp-meta { display: block; font-size: 0.9rem; color: var(--ink-soft); font-weight: 400; }
+.acc-list { margin-top: 1.5rem; }
+.acc__inner ul { padding-left: 1.2rem; margin-block: 0.6rem; }
+.acc__inner h4 { font-family: var(--font-display); font-weight: 700; margin-top: 1.4rem; }
+.acc__inner p { margin-block: 0.6rem; }
+.acc__inner .arrow-link { margin-top: 0.8rem; }
