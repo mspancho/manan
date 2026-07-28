@@ -174,8 +174,8 @@ body.menu-open { overflow: hidden; }
 /* Buttons for keyboard operability; the reset keeps them rendering exactly as
    the <p> elements they replaced. */
 .tab-links { font: inherit; background: none; border: 0; color: inherit;
-  font-size: 1rem; font-weight: 500; cursor: pointer; position: relative;
-  padding: 0 0 0.5rem; }
+  text-align: inherit; font-size: 1rem; font-weight: 500; cursor: pointer;
+  position: relative; padding: 0 0 0.5rem; }
 .tab-links::after { content: ""; width: 0; height: 3px; background: var(--accent-warm);
   position: absolute; left: 0; bottom: -2px; transition: width 0.4s ease; }
 .tab-links.active-link::after { width: 100%; }
