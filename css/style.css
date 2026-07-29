@@ -98,8 +98,12 @@ body.menu-open { overflow: hidden; }
   display: inline-flex; align-items: center; gap: 0.5rem;
   background: var(--brand-deep); color: #fff; text-decoration: none;
   padding: 0.8rem 1.3rem; border-radius: 999px; font-size: 0.95rem;
-  box-shadow: 0 8px 24px rgb(80 117 187 / 0.35); transition: transform 0.3s ease; }
-.fab-resume:hover { transform: translateY(-3px); }
+  box-shadow: 0 8px 24px rgb(80 117 187 / 0.35);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; }
+/* A 3px lift alone reads as "nothing happened"; add colour + shadow so the
+   affordance is unmistakable. */
+.fab-resume:hover { transform: translateY(-3px); background: var(--brand);
+  box-shadow: 0 12px 30px rgb(80 117 187 / 0.45); }
 /* Footer */
 .site-footer { background: var(--ink); color: #cfd8ea; padding-block: 3rem 2rem; margin-top: 0; }
 .site-footer .container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: center; }
@@ -177,7 +181,14 @@ body.menu-open { overflow: hidden; }
 /* ============ About ============ */
 /* Photo centers against the full height of the text column beside it, rather
    than pinning to the top — the text runs much taller once a tab is open. */
+/* Two columns only while there's room for both. Below ~950px the photo
+   degrades into a sliver and the text into a cramped column, so stack early
+   rather than waiting for the 720px mobile breakpoint. */
 .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: center; }
+@media (max-width: 950px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-col-1 { max-width: 360px; margin-inline: auto; }
+}
 .about-col-1 img { border-radius: 18px; }
 .about-col-2 p { color: var(--ink-soft); margin-top: 1.2rem; max-width: 60ch; }
 /* Row-gap matters because the six tabs wrap onto a second line at most widths;
