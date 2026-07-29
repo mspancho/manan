@@ -196,13 +196,15 @@ body.menu-open { overflow: hidden; }
 .tab-titles { display: flex; flex-wrap: wrap; margin: 2rem 0 2.2rem; gap: 1.5rem 2.4rem; }
 /* Buttons for keyboard operability; the reset keeps them rendering exactly as
    the <p> elements they replaced. */
+/* The six tabs wrap onto two rows (the column is ~590px, not the viewport),
+   so the underline needs clear space on BOTH sides: enough padding above it to
+   read as attached to its own label, and row-gap below so it doesn't crowd the
+   wrapped row beneath. */
 .tab-links { font: inherit; background: none; border: 0; color: inherit;
   text-align: inherit; font-size: 1rem; font-weight: 500; cursor: pointer;
-  position: relative; padding: 0 0 0.45rem; }
-/* bottom:0 keeps the rule inside the button's own box (it used to hang 2px
-   below, landing on whatever sat underneath). */
+  position: relative; padding: 0 0 0.75rem; }
 .tab-links::after { content: ""; width: 0; height: 3px; background: var(--accent-warm);
-  position: absolute; left: 0; bottom: 0; transition: width 0.4s ease; }
+  position: absolute; left: 0; bottom: 0.3rem; transition: width 0.4s ease; }
 .tab-links.active-link::after { width: 100%; }
 /* Mouse users see no focus ring at all; keyboard users get a visible one. */
 .tab-links:focus { outline: none; }
