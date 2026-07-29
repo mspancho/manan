@@ -193,15 +193,12 @@ body.menu-open { overflow: hidden; }
 .about-col-2 p { color: var(--ink-soft); margin-top: 1.2rem; max-width: 60ch; }
 /* Row-gap matters because the six tabs wrap onto a second line at most widths;
    without it a wrapped tab's underline collides with the row beneath. */
-/* Row-gap sits below the underline, so it controls the space between the line
-   and the next row of tabs. It needs to exceed the button's own padding-bottom
-   (the gap above the line) or the line reads as belonging to the row beneath. */
-.tab-titles { display: flex; flex-wrap: wrap; margin: 2rem 0 1.6rem; gap: 1.5rem 2.4rem; }
+.tab-titles { display: flex; flex-wrap: wrap; margin: 2rem 0 2.2rem; gap: 1.5rem 2.4rem; }
 /* Buttons for keyboard operability; the reset keeps them rendering exactly as
    the <p> elements they replaced. */
 .tab-links { font: inherit; background: none; border: 0; color: inherit;
   text-align: inherit; font-size: 1rem; font-weight: 500; cursor: pointer;
-  position: relative; padding: 0 0 0.3rem; }
+  position: relative; padding: 0 0 0.45rem; }
 /* bottom:0 keeps the rule inside the button's own box (it used to hang 2px
    below, landing on whatever sat underneath). */
 .tab-links::after { content: ""; width: 0; height: 3px; background: var(--accent-warm);
