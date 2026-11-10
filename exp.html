@@ -20,13 +20,19 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
-        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay" aria-label="Open menu">
+        <svg class="menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
       </button>
     </div>
   </header>
   <nav id="menu-overlay" aria-label="Main menu">
-    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
+    <button class="close-btn" aria-label="Close menu">
+      <svg class="close-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M5 5l14 14M19 5L5 19"/>
+      </svg>
+    </button>
     <div class="container">
       <a style="--i:0" href="index.html">Home</a>
       <a style="--i:1" href="about.html">About</a>
@@ -35,13 +41,18 @@
       <a style="--i:4" href="faq.html">FAQ</a>
     </div>
   </nav>
-  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
-    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  <a class="fab-resume" href="images/Manan_Pancholy_Web_Resume.pdf" download="Manan_Pancholy_Resume.pdf">
+    <svg class="fab-resume__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 3v5h5"/>
+      <path d="M9 13h6M9 17h6"/>
+    </svg>
+    Resume
   </a>
   <main>
     <section class="band">
       <div class="container">
-        <h1 class="sub-title reveal">Experience</h1>
+        <h1 class="sub-title sub-title--rule reveal">Experience</h1>
         <h2 class="reveal">Employment</h2>
         <div class="acc-list reveal-group">
           <div class="acc" style="--i:0">
@@ -49,17 +60,25 @@
               <span class="exp-head-line">
                 <i class="fa-solid fa-laptop-medical" aria-hidden="true"></i>
                 <span>
-                  <h3>Summer Institute in Biomedical Informatics</h3>
-                  <span class="exp-meta">Harvard Medical School Department of Biomedical Informatics · May 2026 - Aug 2026</span>
+                  <h3>Medical AI Researcher (Prev. SIBMI Scholar)</h3>
+                  <span class="exp-meta">Harvard Medical School Department of Biomedical Informatics · Mar 2026 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="acc__body"><div class="acc__inner">
+              <p>Under Pranav Rajpurkar, PhD:</p>
               <ul>
-                <li>Selected as a participant in the Summer Institute in Biomedical Informatics (~1% acceptance rate)</li>
-                <li>Designed & pursing an independent research project under the guidance of Pranav Rajpurkar, PhD</li>
-                <li>Attending lectures and workshops from thought leaders in biomedical informatics</li>
+                <li>Conceived and led a study of AI agents replicating a randomized trial of a chest-pain decision rule in a simulated emergency department with auditable data-generating processes (1st-author paper under review)</li>
+                <li>Evaluating the accuracy of frontier AI models in interpreting chest CT scans from 15+ countries on 5 continents (MAIDA)</li>
+                <li>Hired by Dr. Rajpurkar in August 2026 following the Summer Institute</li>
+              </ul>
+              <h4>SIBMI Scholar</h4>
+              <span class="exp-meta">May 2026 - Aug 2026</span>
+              <ul>
+                <li>Selected as a participant in the Summer Institute in Biomedical Informatics (~5% acceptance rate)</li>
+                <li>Designed & pursued an independent research project under the guidance of Pranav Rajpurkar, PhD</li>
+                <li>Attended lectures and workshops from thought leaders in biomedical informatics</li>
               </ul>
             </div></div>
           </div>
@@ -76,6 +95,7 @@
             </button>
             <div class="acc__body"><div class="acc__inner">
               <ul>
+                <li>Coached 50+ students across Spring 2025 and Spring 2026 in Methods in Informatics and Data Science for Health</li>
                 <li>Walked students through code debugging during office hours to understand best programming principles in Julia/Python/Unix/SQLite</li>
                 <li>Built out JuliaAI programming tutorial page as part of BCBI's CODIAC for Health resource</li>
                 <li>Addressed GitHub issues and answered student questions in class during live coding lab sessions</li>
@@ -95,8 +115,8 @@
             </button>
             <div class="acc__body"><div class="acc__inner">
               <ul>
-                <li>Advise students pursuing an Independent Concentration (IC) (major) at Brown University</li>
-                <li>Review and contribute feedback on IC proposals as a member of the IC Subcommittee of the College Curriculum Committee</li>
+                <li>Advise students pursuing an Independent Concentration (IC) (major) at Brown University (15+ advised closely)</li>
+                <li>Review and contribute feedback on 50+ IC proposals annually as a member of the IC Subcommittee of the College Curriculum Committee</li>
                 <li>Coordinate events with the IC Departmental Undergraduate Group (DUG)</li>
               </ul>
               <p>
@@ -109,8 +129,8 @@
               <span class="exp-head-line">
                 <i class="fa-solid fa-hospital" aria-hidden="true"></i>
                 <span>
-                  <h3>Research Assistant</h3>
-                  <span class="exp-meta">Brown Center for Biomedical Informatics (BCBI) / Rhode Island Hospital / Apex Institute · Apr 2023 - Present</span>
+                  <h3>Student Researcher</h3>
+                  <span class="exp-meta">Brown Center for Biomedical Informatics (BCBI) / Rhode Island Hospital / Apex Institute · Oct 2021 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
@@ -120,26 +140,35 @@
                   Under Neil Sarkar, PhD. (P2MI):<br>
                   <ul>
                       <li>Using Python ML to explore mental disorders in the context of lifestyle medicine using the NIH's All of Us dataset (podium abstract accepted to AMIA 2026)</li>
+                      <li>Proposed and led the study as 1st author; presenting at the AMIA 2026 Annual Symposium in Dallas, TX (November 2026)</li>
+                      <li>Analyzing 1,600 coronary angiography procedures (≈4,000 videos) for my undergraduate capstone project (spring 2027)</li>
                   </ul>
               </p>
               <p>
                   Under Dr. Jinnette Dawn Abbott:<br>
                   <ul>
                       <li>Using multimodal learning as part of a web-based application to analyze and improve outcomes in cardiology patients presenting with acute coronary syndrome</li>
+                      <li>Curating ECGs, notes, and blood tests from patients with acute coronary syndrome for an AI model of catheterization outcomes</li>
+                      <li>2nd author of a nationwide analysis finding similar mortality for elective coronary atherectomy at hospitals with and without on-site surgical backup (<em>Am J Cardiol</em>, 2026)</li>
                   </ul>
               </p>
               <p>
                   Under Drs. Tejas Patel and Jagat Chauhan:<br>
                   <ul>
                       <li>Using Python biostatistics and computational genomics methods to explore patient outcomes in the All of Us dataset</li>
+                      <li>1st author of a two-sample multivariable Mendelian randomization study with Jagat Chauhan, PhD showing that genetically proxied GLP-1 receptor activation lowers joint-replacement risk independent of body weight (under review)</li>
+                      <li>Co-first author of a study of the cross-ancestry portability of a hypertrophic cardiomyopathy polygenic score in a diverse US cohort (<em>Circ Genom Precis Med</em>, 2026)</li>
+                      <li>Co-author of a study of physical activity after semaglutide or tirzepatide initiation in routine care (<em>JAMA Netw Open</em>, in press)</li>
                   </ul>
               </p>
               <p>
-                  Under Dr. Liqi Shu:<br>
+                  Under Dr. Liqi Shu (Apr 2024 - May 2025):<br>
                   <ul>
                       <li>Used Stata/R/Python-based statistical analysis and AI to analyze and improve clinical outcomes in neurology patients to improve clinical workflow, evaluate treatment efficacy, and quantify risk</li>
+                      <li>Developed software that turns audio of patient visits into structured clinical notes with open-source speech and language models; presented at Lifespan (now Brown University Health) Research Day 2025</li>
                   </ul>
               </p>
+              <p>Each publication and patent is detailed, with links, on the <a href="projects.html">Projects</a> page.</p>
             </div></div>
           </div>
         </div>
@@ -172,13 +201,19 @@
                       <li>Personally raised over $5,000 in sponsorships out of a total of $30,000</li>
                       <li>Hosted fall virtual research symposium via Zoom</li>
                       <li>Launched mentorship program connecting premedical students with physicians</li>
+                      <li>Secured free MCAT preparation resources (Kaplan, UWorld, Blueprint) for members through corporate sponsors</li>
               </ul>
+              Continue to help successor officers run the Medical Scholars Summit each year.
               </p>
               <h4>National President-Elect</h4>
               <span class="exp-meta">Jul 2023 - Jul 2024</span>
               <p>Serving on the national board of AAPI Premed, working to promote opportunities for
                   career advancement and mentorship for pre-medical students of Indian origin across the U.S.
               </p>
+              <h4>Founding Member</h4>
+              <span class="exp-meta">Jul 2023</span>
+              <p>Co-founded AAPI's national section for premedical students and established its annual
+                  Medical Scholars Summit (MSS).</p>
               <a class="arrow-link" href="https://www.aapischolars.org/home" target="_blank">Visit AAPI PreMed</a>
             </div></div>
           </div>
@@ -187,13 +222,18 @@
               <span class="exp-head-line">
                 <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
                 <span>
-                  <h3>Fundraising Chair</h3>
-                  <span class="exp-meta">Brown Umeed · May 2024 - May 2026</span>
+                  <h3>Co-President</h3>
+                  <span class="exp-meta">Brown Umeed · May 2026 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="acc__body"><div class="acc__inner">
+              <p>Lead a 15-student team that has raised $10,000+ for cancer treatment of low-income patients
+                  in Brazil, India, Pakistan, and West Africa. Organize and perform in the annual Umeed Benefit
+                  Concert, which brings 10 performing groups to Brown's largest auditorium (Salomon DECI).</p>
+              <h4>Fundraising Chair</h4>
+              <span class="exp-meta">May 2024 - May 2026</span>
               <p>Leading efforts to reach out to donating organizations and design
                   effective ways to fundraise for 501(c)(3) nonprofits that support
                   treatment for low-income cancer patients in South Asia, West Africa,
@@ -221,8 +261,8 @@
               <span class="exp-head-line">
                 <i class="fa-solid fa-user-music" aria-hidden="true"></i>
                 <span>
-                  <h3>President</h3>
-                  <span class="exp-meta">Brown Barsaat · Dec 2025 - May 2026</span>
+                  <h3>Co-President</h3>
+                  <span class="exp-meta">Brown Barsaat · Dec 2025 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
@@ -239,7 +279,7 @@
                   Leading rehearsals and performance setlists.
                   Built website infrastructure.<br>
                   <br>
-                  Arrangements:
+                  Arrangements (7 pieces in 5-8 voice parts, fusing Bollywood songs with Western pop and indie):
                   <ul>
                       <li>"Kaun Tujhe" by Palak Mucchal and "Young & Beautiful" by Lana Del Rey</li>
                       <li>“Barsaat Ki Dhun” by Jubin Nautiyal</li>
@@ -256,7 +296,8 @@
               <h4>Bass</h4>
               <span class="exp-meta">Sep 2023 - Present</span>
               <p>Performing South Asian fusion A Capella as part of Brown Barsaat,
-                  including solo and group performances.</p>
+                  including solo and group performances. Soloist at the annual Umeed Benefit Concert.</p>
+              <a class="arrow-link" href="https://brownbarsaat.com" target="_blank">Visit Brown Barsaat</a>
             </div></div>
           </div>
           <div class="acc" style="--i:3">
@@ -265,7 +306,7 @@
                 <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
                 <span>
                   <h3>Editor</h3>
-                  <span class="exp-meta">Brown Journal or Healthcare Advancement · Sep 2025 - Present</span>
+                  <span class="exp-meta">Brown Journal of Healthcare Advancement · Jan 2025 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
@@ -275,12 +316,12 @@
                   Editor for our team’s Spring 2025 article on Kardiostatus's innovative use of AI for real-time
                   prediction and the nuances of FDA's software as a medical device (SaMD) classification.</p>
               <h4>Writer</h4>
-              <span class="exp-meta">Sep 2025 - Jan 2025</span>
+              <span class="exp-meta">Sep 2024 - Jan 2025</span>
               <p>Researched AI-powered health startup BioRose and interviewed founders Ak and Johnny.
                   Co-wrote and edited our team's Fall 2024 article on their innovative and comprehensive use of AI
                   to build healthier habits for longevity.</p>
               <h4>Researcher</h4>
-              <span class="exp-meta">Sep 2025 - Jan 2025</span>
+              <span class="exp-meta">Sep 2023 - May 2024</span>
               <p>Researched AIDS Project Rhode Island (APRI) and interviewed APRI’s Director David Martins
                   for our team’s Spring 2024 article on APRI’s impact on patient care for HIV/AIDS patients.</p>
               <a class="arrow-link" href="https://brownhealthjournal.cargo.site/" target="_blank">Visit Brown Journal of Healthcare Advancement</a>
@@ -292,7 +333,7 @@
                 <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
                 <span>
                   <h3>Intern</h3>
-                  <span class="exp-meta">Camp Create · Aug 2017 - Present</span>
+                  <span class="exp-meta">Camp Create (Waverly, PA) · Summers, 2017 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
@@ -303,7 +344,9 @@
                   and recycled materials.<br>
                   <br>
                   Encouraging campers to express their unique creativity and practice forgiveness, empathy, and
-                  kindness towards themselves and others.</p>
+                  kindness towards themselves and others.<br>
+                  <br>
+                  Train and mentor new interns at the director's request.</p>
               <a class="arrow-link" href="https://www.facebook.com/allabouttheatrePA/" target="_blank">Visit All About Theatre</a>
             </div></div>
           </div>
@@ -320,7 +363,7 @@
                 <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
                 <span>
                   <h3>Triage, Interpreter</h3>
-                  <span class="exp-meta">Express Urgent Care · Dec 2023 - Dec 2025</span>
+                  <span class="exp-meta">Express Urgent Care · Dec 2023 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
@@ -328,8 +371,9 @@
             <div class="acc__body"><div class="acc__inner">
               <p>Engaged with 200+ patients across multiple periods to take
                   their History of Present Illness (HPI), take vitals, and
-                  administer basic disease tests (COVID, Strep, etc).
-                  Sole interpreter for Hispanic patients across both locations.<br>
+                  administer basic disease tests (COVID, flu, strep) at a walk-in
+                  clinic that sees 50+ patients a day.
+                  Sole Spanish and Gujarati interpreter across both locations.<br>
                   <br>
                   Took calls from patients, registered appointments, verified
                   health insurance coverage, assisted with forms, and facilitated
@@ -368,13 +412,26 @@
               <span class="exp-head-line">
                 <i class="fa-solid fa-eye" aria-hidden="true"></i>
                 <span>
-                  <h3>Observorships</h3>
-                  <span class="exp-meta">Greater Scranton Area · Jun 2020 - Present</span>
+                  <h3>Observerships</h3>
+                  <span class="exp-meta">Greater Scranton Area &amp; Boston, MA · Jun 2020 - Present</span>
                 </span>
               </span>
               <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="acc__body"><div class="acc__inner">
+              <p>100+ hours across gastroenterology, cardiology, surgery, oncology, ophthalmology, and primary care.</p>
+              <p>
+                  Advanced Endoscopy under interventional gastroenterologist Dr. Tyler Berzin, Director of the Advanced Endoscopy Fellowship:<br>
+                  <ul>
+                      <li>Advanced Endoscopy Suite at Beth Israel Deaconess Medical Center (East Campus) in Boston, MA</li>
+                      <li>Observed ERCP with fluoroscopic stent removal, endoscopic ultrasound of a pancreatic cyst,
+                          transgastric debridement of necrotizing pancreatitis, feeding tube placement, and
+                          Barrett's esophagus surveillance biopsies for the national SURVENT trial (radiofrequency ablation vs. monitoring)</li>
+                      <li>Discussed Dr. Berzin's work directing the first prospective trial of AI in live clinical medicine
+                          (computer-vision polyp detection), his current AI skill-assessment research, and the EHR workflow
+                          gaps that slow advanced endoscopy consults</li>
+                  </ul>
+              </p>
               <p>
                   Cardiothoracic Surgery under CT surgeon Dr. Lear Van Koch:<br>
                   <ul>
@@ -422,7 +479,7 @@
                   </ul>
               </p>
               <p>
-                  Opthalmology under retina surgeon Dr. Sachin B. Patel:<br>
+                  Ophthalmology under retina surgeon Dr. Sachin B. Patel:<br>
                   <ul>
                       <li>Private practice in Clarks Summit, PA</li>
                       <li>Became familiar with ophthalmologic equipment, terminology, and procedure</li>

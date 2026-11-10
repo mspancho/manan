@@ -20,13 +20,19 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
-        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay" aria-label="Open menu">
+        <svg class="menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
       </button>
     </div>
   </header>
   <nav id="menu-overlay" aria-label="Main menu">
-    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
+    <button class="close-btn" aria-label="Close menu">
+      <svg class="close-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M5 5l14 14M19 5L5 19"/>
+      </svg>
+    </button>
     <div class="container">
       <a style="--i:0" href="index.html">Home</a>
       <a style="--i:1" href="about.html">About</a>
@@ -35,8 +41,13 @@
       <a style="--i:4" href="faq.html">FAQ</a>
     </div>
   </nav>
-  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
-    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  <a class="fab-resume" href="images/Manan_Pancholy_Web_Resume.pdf" download="Manan_Pancholy_Resume.pdf">
+    <svg class="fab-resume__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 3v5h5"/>
+      <path d="M9 13h6M9 17h6"/>
+    </svg>
+    Resume
   </a>
   <main>
     <section class="band">
@@ -46,6 +57,39 @@
             please contact me at manan_pancholy@brown.edu</h3>
         <div class="proj-grid reveal-group">
           <article class="proj-card" style="--i:0">
+            <i class="fa-solid fa-wave-pulse proj-card__icon" aria-hidden="true"></i>
+            <div class="chip-row"><span class="chip chip--research">Research</span><span class="chip chip--patent">Patent</span></div>
+            <h2>ANGIO-EXPAND</h2>
+            <p class="proj-card__lede">Invented and lead a system that predicts the expansion adequacy of newly placed coronary stents from angiography video and clinical data, which today requires an additional imaging catheter.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Drafted the patent specification as sole inventor. U.S. Patent Application No. 19/697,575, filed June 4, 2026 and published October 29, 2026 (US 2026/0340823 A1).</p>
+                <p>Assembling 1,600 procedures (≈4,000 videos) at Apex Heart Institute (Ahmedabad, India) for my spring 2027 capstone, advised by Elizabeth Chen, PhD and Neil Sarkar, PhD.</p>
+              </div></div>
+            </div>
+            <a class="arrow-link" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20260340823" target="_blank">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:1">
+            <i class="fa-solid fa-robot proj-card__icon" aria-hidden="true"></i>
+            <span class="chip chip--research">Research</span>
+            <h2>AI Agents in a Simulated ED</h2>
+            <p class="proj-card__lede">Conceived and led a study of AI agents replicating a randomized trial of a chest-pain decision rule in a simulated emergency department with auditable data-generating processes.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>1st-author manuscript under review (2026): LLM-agent simulation of operational decisions in a clinical environment.</p>
+                <p>Research conducted at Harvard Medical School’s Department of Biomedical Informatics under Pranav Rajpurkar, PhD.</p>
+              </div></div>
+            </div>
+          </article>
+          <article class="proj-card" style="--i:2">
             <i class="fa-solid fa-x-ray proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>PaCX-MAE</h2>
@@ -57,17 +101,22 @@
                 <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
               </button>
               <div class="acc__body"><div class="acc__inner">
+                <p>Co-developed the framework, which teaches chest X-ray models to draw on electrocardiogram and
+                    laboratory data during training; PaCX-MAE improves disease prediction in settings with limited
+                    training data. Brown University Department of Computer Science graduate seminar research
+                    project (Oct 2025 - Jul 2026).</p>
                 <p>Experimented with distillation and led dataset preprocessing & evaluation on
                     clinical benchmarks (MedMod + CheXchoNet), including systematic component studies
                     (low-data efficiency and ablations) to isolate model behavior.</p>
                 <p>Accepted as a poster presentation at the 43rd International Conference on Machine Learning (ICML)
-                    3rd Annual Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences (FM4LS).</p>
+                    3rd Annual Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences (FM4LS),
+                    Seoul, South Korea, July 2026.</p>
                 <p><span>Tools: </span>PyTorch, PyTorch Lightning, WandB, DDP, Slurm, LoRA, Scikit-learn</p>
               </div></div>
             </div>
             <a class="arrow-link" href="https://arxiv.org/abs/2606.01537" target="_blank">Learn More</a>
           </article>
-          <article class="proj-card" style="--i:1">
+          <article class="proj-card" style="--i:3">
             <i class="fa-solid fa-hexagon-nodes proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>GraphiStasis</h2>
@@ -88,7 +137,7 @@
             </div>
             <a class="arrow-link" href="https://github.com/mspancho/graphistasis" target="_blank">Learn More</a>
           </article>
-          <article class="proj-card" style="--i:2">
+          <article class="proj-card" style="--i:4">
             <i class="fa-solid fa-head-side-brain proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>ML Analysis of Mental Health</h2>
@@ -101,12 +150,78 @@
                 <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
               </button>
               <div class="acc__body"><div class="acc__inner">
-                <p>Accepted as a podium abstract at the 2026 Annual Meeting of the American Medical Informatics Association.</p>
+                <p>Proposed and led the study as 1st author (Pancholy MS, Qureshi DA, Sarkar IN).</p>
+                <p>Accepted as a podium abstract at the 2026 Annual Meeting of the American Medical Informatics Association
+                    (Dallas, TX, November 2026).</p>
                 <p><span>Tools: </span>Scikit-learn, XG Boost, Pandas, Seaborn, Matplotlib</p>
               </div></div>
             </div>
           </article>
-          <article class="proj-card" style="--i:3">
+          <article class="proj-card" style="--i:5">
+            <i class="fa-solid fa-dna proj-card__icon" aria-hidden="true"></i>
+            <span class="chip chip--research">Research</span>
+            <h2>HCM Polygenic Score Portability</h2>
+            <p class="proj-card__lede">Co-first-authored a study of how well a hypertrophic cardiomyopathy polygenic score carries across ancestries in a diverse US cohort.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Published online in <em>Circulation: Genomic and Precision Medicine</em> on November 3, 2026 (Pancholy MS*, Le Q*, Bhandari A, et al.; *contributed equally).</p>
+              </div></div>
+            </div>
+            <a class="arrow-link" href="https://doi.org/10.1161/CIRCGEN.126.005968" target="_blank">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:6">
+            <i class="fa-solid fa-person-running proj-card__icon" aria-hidden="true"></i>
+            <span class="chip chip--research">Research</span>
+            <h2>GLP-1 Drugs &amp; Physical Activity</h2>
+            <p class="proj-card__lede">Co-authored a study of how physical activity changed among All of Us participants who were started on semaglutide or tirzepatide in the course of routine care.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Conducted with Drs. Tejas Patel and Jagat Chauhan at Apex Heart Institute.</p>
+                <p>Bhandari A, Le Q, Pancholy MS, et al. Physical activity after semaglutide or tirzepatide initiation in routine care. <em>JAMA Network Open</em>. In press (2026).</p>
+              </div></div>
+            </div>
+          </article>
+          <article class="proj-card" style="--i:7">
+            <i class="fa-solid fa-bone proj-card__icon" aria-hidden="true"></i>
+            <span class="chip chip--research">Research</span>
+            <h2>GLP-1 & Joint Replacement Risk</h2>
+            <p class="proj-card__lede">First-authored a two-sample multivariable Mendelian randomization study showing that genetically proxied GLP-1 receptor activation lowers osteoarthritis-related joint replacement risk independent of body weight.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Conducted with Jagat Chauhan, PhD at Apex Heart Institute. Manuscript under review (2026).</p>
+              </div></div>
+            </div>
+          </article>
+          <article class="proj-card" style="--i:8">
+            <i class="fa-solid fa-heart-circle-bolt proj-card__icon" aria-hidden="true"></i>
+            <span class="chip chip--research">Research</span>
+            <h2>Coronary Atherectomy Outcomes</h2>
+            <p class="proj-card__lede">Second-authored a contemporary nationwide analysis comparing outcomes of elective coronary atherectomy at hospitals with and without on-site surgical backup.</p>
+            <div class="acc">
+              <button class="acc__head">
+                <span>More detail</span>
+                <span class="acc__icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+              </button>
+              <div class="acc__body"><div class="acc__inner">
+                <p>Found similar mortality across the two hospital types. Conducted under Dr. Jinnette Dawn Abbott at Rhode Island Hospital.</p>
+                <p>Singh A, Pancholy MS, Thaker S, et al. <em>American Journal of Cardiology</em>. 2026;277:101-109.</p>
+              </div></div>
+            </div>
+            <a class="arrow-link" href="https://doi.org/10.1016/j.amjcard.2026.08.008" target="_blank">Learn More</a>
+          </article>
+          <article class="proj-card" style="--i:9">
             <i class="fa-solid fa-cloud-showers-heavy proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--web">Web</span>
             <h2>Barsite</h2>
@@ -124,7 +239,7 @@
             </div>
             <a class="arrow-link" href="https://github.com/mspancho/barsite" target="_blank">Learn More</a>
           </article>
-          <article class="proj-card" style="--i:4">
+          <article class="proj-card" style="--i:10">
             <i class="fa-solid fa-wheat-awn-circle-exclamation proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>cel-IS-ac</h2>
@@ -141,7 +256,7 @@
               </div></div>
             </div>
           </article>
-          <article class="proj-card" style="--i:5">
+          <article class="proj-card" style="--i:11">
             <i class="fa-solid fa-heart-circle-exclamation proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>IE Risk Modeling</h2>
@@ -159,9 +274,9 @@
                 <p><span>Tools: </span>Scikit-learn, Slurm, Bash, XGBoost, DataFrames, Matplotlib</p>
               </div></div>
             </div>
-            <a class="arrow-link" href="https://github.com/mspancho/ie-triage">Learn More</a>
+            <a class="arrow-link" href="https://github.com/mspancho/ie-triage" target="_blank">Learn More</a>
           </article>
-          <article class="proj-card" style="--i:6">
+          <article class="proj-card" style="--i:12">
             <i class="fa-solid fa-heart-pulse proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>AFib Risk Modeling</h2>
@@ -178,7 +293,7 @@
               </div></div>
             </div>
           </article>
-          <article class="proj-card" style="--i:7">
+          <article class="proj-card" style="--i:13">
             <i class="fa-solid fa-notes-medical proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--research">Research</span>
             <h2>AI Notewriting</h2>
@@ -191,12 +306,13 @@
               </button>
               <div class="acc__body"><div class="acc__inner">
                 <p>Used LoRA for fine-tuning LLaMA-3.1 on synthetic clinical data.</p>
-                <p>Research conducted under the Shu Lab at Rhode Island Hospital.</p>
+                <p>Research conducted under the Shu Lab at Rhode Island Hospital. Presented at Lifespan (now Brown
+                    University Health) Research Day 2025; this work inspired the ACC lecture on AI liability.</p>
                 <p><span>Tools: </span>HuggingFace Transformers, WhisperX, PyTorch, NEJM CPCs (clinico-pathological conferences)</p>
               </div></div>
             </div>
           </article>
-          <article class="proj-card" style="--i:8">
+          <article class="proj-card" style="--i:14">
             <i class="fa-solid fa-presentation-screen proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--teaching">Teaching</span>
             <h2>ACC Lecture</h2>
@@ -211,19 +327,19 @@
               <div class="acc__body"><div class="acc__inner">
                 <p>Conducted comprehensive scoping review of implementation and ethics of
                     ambient AI scribes and adjacent HIT prior to co-lecturing on findings
-                    with Dr. David Dudzinski, MD JD.</p>
+                    with Dr. David Dudzinski, MD JD. Delivered virtually on November 15, 2024.</p>
                 <p><span>Tools: </span>Microsoft PowerPoint, PubMed, Google Scholar, Justia</p>
               </div></div>
             </div>
           </article>
-          <article class="proj-card" style="--i:9">
+          <article class="proj-card" style="--i:15">
             <i class="fa-brands fa-researchgate proj-card__icon" aria-hidden="true"></i>
             <span class="chip">Profile</span>
             <h2>ResearchGate Profile</h2>
             <p class="proj-card__lede">Showcasing my research publications and contributions.</p>
-            <a class="arrow-link" href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf">Learn More</a>
+            <a class="arrow-link" href="https://www.researchgate.net/profile/Manan-Pancholy?ev=hdr_xprf" target="_blank">Learn More</a>
           </article>
-          <article class="proj-card" style="--i:10">
+          <article class="proj-card" style="--i:16">
             <i class="fa-solid fa-browser proj-card__icon" aria-hidden="true"></i>
             <span class="chip chip--web">Web</span>
             <h2>Personal Website</h2>

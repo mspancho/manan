@@ -4,7 +4,7 @@
   <link rel="icon" type="image/x-icon" href="images/MSP logo.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mako&family=Noto+Sans+Gujarati:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/fontawesome.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/solid.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v6.7.2/css/regular.css"/>
@@ -19,14 +19,21 @@
 </head><body>
   <header class="site-header">
     <div class="container">
-      <a href="index.html"><img src="images/MSP logo.png" class="logo" alt="MSP logo"></a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay">
-        Menu <i class="fa-light fa-bars" aria-hidden="true"></i>
+      <!-- Already home: the logo is not a link here. -->
+      <img src="images/MSP logo.png" class="logo" alt="MSP logo">
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu-overlay" aria-label="Open menu">
+        <svg class="menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
       </button>
     </div>
   </header>
   <nav id="menu-overlay" aria-label="Main menu">
-    <button class="close-btn" aria-label="Close menu"><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
+    <button class="close-btn" aria-label="Close menu">
+      <svg class="close-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M5 5l14 14M19 5L5 19"/>
+      </svg>
+    </button>
     <div class="container">
       <a style="--i:0" href="index.html">Home</a>
       <a style="--i:1" href="about.html">About</a>
@@ -35,8 +42,13 @@
       <a style="--i:4" href="faq.html">FAQ</a>
     </div>
   </nav>
-  <a class="fab-resume" href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé">
-    <i class="fa-solid fa-file-user" aria-hidden="true"></i> Résumé
+  <a class="fab-resume" href="images/Manan_Pancholy_Web_Resume.pdf" download="Manan_Pancholy_Resume.pdf">
+    <svg class="fab-resume__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 3v5h5"/>
+      <path d="M9 13h6M9 17h6"/>
+    </svg>
+    Resume
   </a>
   <main>
     <section class="hero">
@@ -53,7 +65,7 @@
           <a href="https://github.com/mspancho" target="_blank" aria-label="GitHub">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
-          <a href="images/Pancholy_Manan_Resume.pdf" download="Manan S. Pancholy Resumé" target="_blank" aria-label="Download résumé">
+          <a href="images/Manan_Pancholy_Web_Resume.pdf" download="Manan_Pancholy_Resume.pdf" target="_blank" aria-label="Download resume">
             <i class="fa-solid fa-file-user" aria-hidden="true"></i>
           </a>
         </div>
@@ -62,19 +74,52 @@
     </section>
     <section id="intro" class="band">
       <div class="container">
-        <p class="display statement reveal">I seek to leverage data to its fullest potential
-        to improve human health — whether that means helping patients, physicians,
-        or healthcare systems.</p>
+        <!-- Pronunciation · Gujarati script · meaning. The pronunciation is a
+             button that plays audio/manan.(m4a|mp3); without a clip it renders
+             as plain text (see initNameAudio in js/site.js). -->
+        <div class="name-panel display reveal" aria-label="About my name">
+          <div class="name-panel__item">
+            <span class="name-panel__label">Pronunciation</span>
+            <button class="name-panel__say" type="button" aria-label="Hear how to pronounce Manan">
+              <span class="name-panel__pron"><em>MUH</em>-nuhn</span>
+              <svg class="name-panel__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 9v6h4l5 4V5L8 9H4z"/>
+                <path class="name-panel__wave" d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path class="name-panel__wave" d="M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <span class="name-panel__dot" aria-hidden="true">&bull;</span>
+          <div class="name-panel__item">
+            <span class="name-panel__label">Gujarati</span>
+            <button class="name-panel__say" type="button" aria-label="Hear how to pronounce Manan">
+              <span class="name-panel__script" lang="gu">મનન્</span>
+              <svg class="name-panel__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 9v6h4l5 4V5L8 9H4z"/>
+                <path class="name-panel__wave" d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path class="name-panel__wave" d="M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <span class="name-panel__dot" aria-hidden="true">&bull;</span>
+          <div class="name-panel__item">
+            <span class="name-panel__label">Meaning</span>
+            <span class="name-panel__meaning">Contemplation</span>
+          </div>
+        </div>
+        <!-- First click plays the normal clip; a second click within 5s plays the slow one. -->
+        <audio id="name-audio" preload="metadata" src="audio/manan.m4a"></audio>
+        <audio id="name-audio-slow" preload="metadata" src="audio/manan%20(slow+reverb).m4a"></audio>
       </div>
     </section>
     <section class="band band--ice">
       <div class="container">
         <p class="eyebrow reveal">Explore</p>
         <div class="link-cards reveal-group">
-          <a class="link-card" style="--i:0" href="about.html"><h2>About</h2><p>Toolbox, interests, education, coursework.</p><span class="arrow-link">Find out more</span></a>
-          <a class="link-card" style="--i:1" href="projects.html"><h2>Projects</h2><p>ML research, health informatics, and web builds.</p><span class="arrow-link">Find out more</span></a>
-          <a class="link-card" style="--i:2" href="exp.html"><h2>Experience</h2><p>Employment, service, and clinical work.</p><span class="arrow-link">Find out more</span></a>
-          <a class="link-card" style="--i:3" href="faq.html"><h2>FAQ</h2><p>Questions, answers, and a way to reach me.</p><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:0" href="about.html"><h2>About</h2><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:1" href="projects.html"><h2>Projects</h2><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:2" href="exp.html"><h2>Experience</h2><span class="arrow-link">Find out more</span></a>
+          <a class="link-card" style="--i:3" href="faq.html"><h2>FAQ</h2><span class="arrow-link">Find out more</span></a>
         </div>
       </div>
     </section>
