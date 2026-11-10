@@ -130,11 +130,10 @@ body.menu-open { overflow: hidden; }
 .reveal { opacity: 0; transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.in { opacity: 1; transform: none; }
+/* Stagger delay is set per item by initReveals() when a batch enters view. */
 .reveal-group > * { opacity: 0; transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  /* Indices run past 5 on long grids; cap the wait so late items don't lag. */
-  transition-delay: min(calc(var(--i, 0) * 80ms), 480ms); }
-.reveal-group.in > * { opacity: 1; transform: none; }
+  transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal-group > .in { opacity: 1; transform: none; }
 /* ============ Accordion ============ */
 .acc { border-bottom: 1px solid var(--line); }
 .acc__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -194,12 +193,6 @@ html.vt-fallback body.leaving { opacity: 0; transition: opacity 0.3s ease; }
 #typewriter-text, .cursor { color: var(--accent-name); }
 .cursor { animation: blink 1s infinite; font-weight: 700; }
 @keyframes blink { 0%,50% {opacity:1} 51%,100% {opacity:0} }
-.social-icons { margin-top: 1.6rem; display: flex; gap: 1.1rem; }
-.social-icons a { font-size: 1.7rem; color: var(--ink); transition: color 0.3s ease, transform 0.3s ease; }
-.social-icons a:hover { color: var(--brand-deep); transform: translateY(-3px); }
-.scroll-cue { display: inline-block; margin-top: 3rem; color: var(--brand-deep);
-  font-size: 1.3rem; animation: cue 1.8s ease-in-out infinite; }
-@keyframes cue { 0%,100% { transform: translateY(0) } 50% { transform: translateY(8px) } }
 /* Name panel: pronunciation (a play button) · Gujarati · meaning */
 .name-panel { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.6em 0.75em;
   font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; }
@@ -227,18 +220,10 @@ html.vt-fallback body.leaving { opacity: 0; transition: opacity 0.3s ease; }
   .name-panel { flex-direction: column; align-items: flex-start; gap: 0.3em; }
   .name-panel__dot { display: none; }
 }
-.link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2rem; }
-.link-card { background: #fff; border-radius: 18px; padding: 2rem 1.6rem; text-decoration: none;
-  display: flex; flex-direction: column; gap: 0.7rem; border: 1px solid var(--line);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.link-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgb(80 117 187 / 0.15); }
-.link-card h2 { font-size: 1.6rem; }
-.link-card h2 { flex: 1; }
 @media (max-width: 720px) {
   .hero { background:
     linear-gradient(135deg, #6a80d5 0%, #88a3d8 22%, #c7f2bc 55%, #d1f3f5 80%, #ddeefe 100%); }
   .hero__inner { text-align: center; }
-  .social-icons { justify-content: center; }
 }
 .in-view-immediate > * { opacity: 1 !important; transform: none !important; }
 /* ============ About ============ */
@@ -329,7 +314,6 @@ html.vt-fallback body.leaving { opacity: 0; transition: opacity 0.3s ease; }
   color: var(--brand-deep); }
 .acc__inner p { margin-block: 0.6rem; }
 .acc__inner .arrow-link { margin-top: 0.8rem; }
-/* Citation lists (Publications & Patents) */
 /* ============ FAQ ============ */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

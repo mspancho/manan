@@ -19,13 +19,24 @@
       if (e.key === "Escape" && overlay.classList.contains("open")) setOpen(false);
     });
   }
+  /* Scroll-in reveals. Group children are observed one by one rather than
+     the group as a whole: a 17-card grid on a phone is ~7000px tall, so no
+     15% of it is ever on screen at once and the group never revealed at all.
+     Children that enter together are staggered; a lone card scrolling in
+     later gets no delay. */
   function initReveals() {
     const io = new IntersectionObserver((entries) => {
+      let k = 0;
       for (const e of entries) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        if (!e.isIntersecting) continue;
+        if (e.target.matches(".reveal-group > *")) {
+          e.target.style.transitionDelay = Math.min(k++ * 80, 480) + "ms";
+        }
+        e.target.classList.add("in");
+        io.unobserve(e.target);
       }
-    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-    document.querySelectorAll(".reveal, .reveal-group").forEach((el) => io.observe(el));
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal, .reveal-group > *").forEach((el) => io.observe(el));
   }
   function initAccordions() {
     document.querySelectorAll(".acc__head").forEach((head) => {
